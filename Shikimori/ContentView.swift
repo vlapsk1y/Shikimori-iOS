@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Shikimori
 //
-//  Created by Vova on 30.11.2023.
+//  Created by vlapsk1y on 30.11.2023.
 //
 
 import SwiftUI

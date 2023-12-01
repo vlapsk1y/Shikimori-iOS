@@ -1,0 +1,3 @@
+target 'Shikimori' do
+	pod 'MultipartForm', '~> 0.1'
+end

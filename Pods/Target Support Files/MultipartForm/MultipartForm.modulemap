@@ -1,0 +1,6 @@
+module MultipartForm {
+  umbrella header "MultipartForm-umbrella.h"
+
+  export *
+  module * { export * }
+}
