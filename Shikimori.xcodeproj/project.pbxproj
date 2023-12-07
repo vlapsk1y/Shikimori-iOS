@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
+		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
 		805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B22FC2B1A4FD500BF9A1F /* Const.swift */; };
 		805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B22FE2B1A5BEA00BF9A1F /* APIRequestError.swift */; };
+		805BBC362B1E3BD70072944D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC2E2B1E3BD70072944D /* Status.swift */; };
+		805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC2F2B1E3BD70072944D /* TypeEnum.swift */; };
+		805BBC392B1E3BD70072944D /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC312B1E3BD70072944D /* Stats.swift */; };
+		805BBC3B2B1E3BD70072944D /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC332B1E3BD70072944D /* Ratings.swift */; };
+		805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC342B1E3BD70072944D /* FullStatuses.swift */; };
+		805BBC3D2B1E3BD70072944D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC352B1E3BD70072944D /* User.swift */; };
 		80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AE92B18EA8E00E8730E /* ShikimoriApp.swift */; };
 		80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AEB2B18EA8E00E8730E /* ContentView.swift */; };
 		80869AEE2B18EA9000E8730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AED2B18EA9000E8730E /* Assets.xcassets */; };
@@ -16,13 +24,22 @@
 		80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */; };
 		80E16F092B1905C200A27323 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E16F082B1905C200A27323 /* APIRouter.swift */; };
 		80E16F0B2B19098100A27323 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E16F0A2B19098100A27323 /* Error.swift */; };
+		80EC72DC2B22569200277419 /* NameValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC72DB2B22569200277419 /* NameValue.swift */; };
 		C84DC4431562CBD76FA53CC8 /* libPods-Shikimori.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D698A4E85B0132714D1F8E25 /* libPods-Shikimori.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6BB3A6D3B24FDC3039D80D62 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.debug.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
+		803DAE162B1B310900D3A42B /* UsersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocol.swift; sourceTree = "<group>"; };
+		803DAE1A2B1B32C100D3A42B /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
 		805B22FC2B1A4FD500BF9A1F /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		805B22FE2B1A5BEA00BF9A1F /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
+		805BBC2E2B1E3BD70072944D /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		805BBC2F2B1E3BD70072944D /* TypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeEnum.swift; sourceTree = "<group>"; };
+		805BBC312B1E3BD70072944D /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		805BBC332B1E3BD70072944D /* Ratings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
+		805BBC342B1E3BD70072944D /* FullStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStatuses.swift; sourceTree = "<group>"; };
+		805BBC352B1E3BD70072944D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80869AE62B18EA8E00E8730E /* Shikimori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shikimori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80869AE92B18EA8E00E8730E /* ShikimoriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikimoriApp.swift; sourceTree = "<group>"; };
 		80869AEB2B18EA8E00E8730E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +48,7 @@
 		80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestDispatcher.swift; sourceTree = "<group>"; };
 		80E16F082B1905C200A27323 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		80E16F0A2B19098100A27323 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		80EC72DB2B22569200277419 /* NameValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValue.swift; sourceTree = "<group>"; };
 		B1FCC36BF23DDC70CFD195CB /* Pods-Shikimori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.release.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.release.xcconfig"; sourceTree = "<group>"; };
 		D698A4E85B0132714D1F8E25 /* libPods-Shikimori.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shikimori.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -53,6 +71,14 @@
 				D698A4E85B0132714D1F8E25 /* libPods-Shikimori.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		803DAE152B1B30F500D3A42B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				803DAE162B1B310900D3A42B /* UsersProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		80869ADD2B18EA8E00E8730E = {
@@ -122,6 +148,7 @@
 		80F900F32B18FB69001F937F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				803DAE152B1B30F500D3A42B /* Protocols */,
 				80E16F082B1905C200A27323 /* APIRouter.swift */,
 				80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */,
 				805B22FE2B1A5BEA00BF9A1F /* APIRequestError.swift */,
@@ -132,7 +159,15 @@
 		80F900F42B18FDA9001F937F /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				805BBC2E2B1E3BD70072944D /* Status.swift */,
+				805BBC342B1E3BD70072944D /* FullStatuses.swift */,
+				805BBC332B1E3BD70072944D /* Ratings.swift */,
+				805BBC312B1E3BD70072944D /* Stats.swift */,
+				805BBC2F2B1E3BD70072944D /* TypeEnum.swift */,
+				805BBC352B1E3BD70072944D /* User.swift */,
 				80E16F0A2B19098100A27323 /* Error.swift */,
+				803DAE1A2B1B32C100D3A42B /* UserImage.swift */,
+				80EC72DB2B22569200277419 /* NameValue.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -243,12 +278,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */,
+				805BBC392B1E3BD70072944D /* Stats.swift in Sources */,
+				805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */,
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
+				803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */,
+				805BBC3D2B1E3BD70072944D /* User.swift in Sources */,
 				80E16F092B1905C200A27323 /* APIRouter.swift in Sources */,
+				80EC72DC2B22569200277419 /* NameValue.swift in Sources */,
 				805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */,
+				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
+				805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */,
 				80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */,
+				805BBC3B2B1E3BD70072944D /* Ratings.swift in Sources */,
 				805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

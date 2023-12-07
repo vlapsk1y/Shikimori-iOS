@@ -7,17 +7,20 @@
 
 import Foundation
 
-struct Error: Codable {
+struct ErrorAPI {
     var error: String
     var description: String
     
-    public init(error: String, description: String) {
-            self.error = error
-            self.description = description
-        }
-        
-        enum CodingKeys: String, CodingKey {
-            case error = "error"
-            case description = "error_description"
-        }
+    enum CodingKeys: String, CodingKey {
+        case error
+        case description = "error_description"
+    }
+}
+
+extension ErrorAPI: Decodable {
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        error = try values.decode(String.self, forKey: .error)
+        description = try values.decode(String.self, forKey: .description)
+    }
 }
