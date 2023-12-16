@@ -9,9 +9,9 @@ import Foundation
 
 class APIRequestDispatcher {
     
-    class func request<T: Codable>(apiRouter: APIRouter) async throws -> T {
+    class func request<T: Decodable>(apiRouter: APIRouter) async throws -> T {
         var components = URLComponents()
-        components.host = domainAPI
+        components.host = DOMAIN_API
         components.scheme = "https"
         components.path = apiRouter.path
         
@@ -19,7 +19,9 @@ class APIRequestDispatcher {
         
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = apiRouter.method
-        urlRequest.addValue(userAgent, forHTTPHeaderField: "User-Agent")
+        urlRequest.addValue(USER_AGENT, forHTTPHeaderField: "User-Agent")
+        urlRequest.addValue(apiRouter.parameters!.contentType, forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = apiRouter.parameters!.data
         
         let session = URLSession(configuration: .default)
                 return try await withCheckedThrowingContinuation { continuation in

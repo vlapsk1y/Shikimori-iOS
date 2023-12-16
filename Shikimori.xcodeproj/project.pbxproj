@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
 		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
 		805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B22FC2B1A4FD500BF9A1F /* Const.swift */; };
@@ -17,6 +18,11 @@
 		805BBC3B2B1E3BD70072944D /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC332B1E3BD70072944D /* Ratings.swift */; };
 		805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC342B1E3BD70072944D /* FullStatuses.swift */; };
 		805BBC3D2B1E3BD70072944D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC352B1E3BD70072944D /* User.swift */; };
+		80606E092B2E5847009A7B2D /* FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80606E082B2E5847009A7B2D /* FormData.swift */; };
+		8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1812B23275200A2A74D /* AuthorizationModel.swift */; };
+		8078F1842B2327A300A2A74D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1832B2327A300A2A74D /* LoginView.swift */; };
+		807EAF982B22F34400C79358 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807EAF972B22F34400C79358 /* AuthProtocol.swift */; };
+		807EAF9A2B22F5D600C79358 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807EAF992B22F5D600C79358 /* Token.swift */; };
 		80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AE92B18EA8E00E8730E /* ShikimoriApp.swift */; };
 		80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AEB2B18EA8E00E8730E /* ContentView.swift */; };
 		80869AEE2B18EA9000E8730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AED2B18EA9000E8730E /* Assets.xcassets */; };
@@ -30,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		6BB3A6D3B24FDC3039D80D62 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.debug.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
+		8013EAE92B2449D900FD9A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		803AD7952B2B41A700356E1F /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		803DAE162B1B310900D3A42B /* UsersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocol.swift; sourceTree = "<group>"; };
 		803DAE1A2B1B32C100D3A42B /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
 		805B22FC2B1A4FD500BF9A1F /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -40,6 +48,11 @@
 		805BBC332B1E3BD70072944D /* Ratings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		805BBC342B1E3BD70072944D /* FullStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStatuses.swift; sourceTree = "<group>"; };
 		805BBC352B1E3BD70072944D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		80606E082B2E5847009A7B2D /* FormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormData.swift; sourceTree = "<group>"; };
+		8078F1812B23275200A2A74D /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
+		8078F1832B2327A300A2A74D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		807EAF972B22F34400C79358 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
+		807EAF992B22F5D600C79358 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		80869AE62B18EA8E00E8730E /* Shikimori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shikimori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80869AE92B18EA8E00E8730E /* ShikimoriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikimoriApp.swift; sourceTree = "<group>"; };
 		80869AEB2B18EA8E00E8730E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,10 +86,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		803AD7942B2B419600356E1F /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				803AD7952B2B41A700356E1F /* AuthClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		803DAE152B1B30F500D3A42B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				803DAE162B1B310900D3A42B /* UsersProtocol.swift */,
+				807EAF972B22F34400C79358 /* AuthProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -102,9 +124,9 @@
 		80869AE82B18EA8E00E8730E /* Shikimori */ = {
 			isa = PBXGroup;
 			children = (
+				8013EAE92B2449D900FD9A13 /* Info.plist */,
 				80F900F42B18FDA9001F937F /* DTO */,
 				80F900F32B18FB69001F937F /* Network */,
-				80F900F22B18F20B001F937F /* Repository */,
 				80F900F12B18F207001F937F /* View */,
 				80F900F02B18F201001F937F /* Model */,
 				80869AE92B18EA8E00E8730E /* ShikimoriApp.swift */,
@@ -112,6 +134,7 @@
 				80869AED2B18EA9000E8730E /* Assets.xcassets */,
 				80869AEF2B18EA9000E8730E /* Preview Content */,
 				805B22FC2B1A4FD500BF9A1F /* Const.swift */,
+				80606E082B2E5847009A7B2D /* FormData.swift */,
 			);
 			path = Shikimori;
 			sourceTree = "<group>";
@@ -127,6 +150,7 @@
 		80F900F02B18F201001F937F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8078F1812B23275200A2A74D /* AuthorizationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,20 +158,15 @@
 		80F900F12B18F207001F937F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8078F1832B2327A300A2A74D /* LoginView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		80F900F22B18F20B001F937F /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		80F900F32B18FB69001F937F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				803AD7942B2B419600356E1F /* Client */,
 				803DAE152B1B30F500D3A42B /* Protocols */,
 				80E16F082B1905C200A27323 /* APIRouter.swift */,
 				80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */,
@@ -168,6 +187,7 @@
 				80E16F0A2B19098100A27323 /* Error.swift */,
 				803DAE1A2B1B32C100D3A42B /* UserImage.swift */,
 				80EC72DB2B22569200277419 /* NameValue.swift */,
+				807EAF992B22F5D600C79358 /* Token.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -285,14 +305,20 @@
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */,
 				805BBC3D2B1E3BD70072944D /* User.swift in Sources */,
+				803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */,
 				80E16F092B1905C200A27323 /* APIRouter.swift in Sources */,
+				8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */,
 				80EC72DC2B22569200277419 /* NameValue.swift in Sources */,
+				807EAF9A2B22F5D600C79358 /* Token.swift in Sources */,
 				805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
+				80606E092B2E5847009A7B2D /* FormData.swift in Sources */,
 				805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */,
 				80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */,
+				807EAF982B22F34400C79358 /* AuthProtocol.swift in Sources */,
 				805BBC3B2B1E3BD70072944D /* Ratings.swift in Sources */,
+				8078F1842B2327A300A2A74D /* LoginView.swift in Sources */,
 				805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +457,7 @@
 				DEVELOPMENT_TEAM = 85XD522TSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shikimori/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Шикимори";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -467,6 +494,7 @@
 				DEVELOPMENT_TEAM = 85XD522TSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shikimori/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Шикимори";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

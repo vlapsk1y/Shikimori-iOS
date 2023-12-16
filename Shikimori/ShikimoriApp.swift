@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct ShikimoriApp: App {
+    @ObservedObject var auth = AuthorizationModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if auth.isLogged() {
+                ContentView()
+            } else {
+                LoginView()
+            }
         }
     }
+    
+    
 }

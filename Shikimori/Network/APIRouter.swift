@@ -20,30 +20,38 @@ enum APIRouter {
     // doc: https://shikimori.one/api/doc/1.0/animes/show
     case getAnime(id: Int)
     
-    // Part of Auth (first part is authorization via Safari, because it's OAuth)
+    // Part of Auth (first part is authorization though Safari (ASWebAuthentication), because it's OAuth)
     
-    case token(code: String?, id: String, secret: String, redirect: String?, grandType: String, refreshToken: String?)
+    case token(code: String?, grandType: String, refreshToken: String?)
     
     // important things
     
-    var parameters: MultipartForm? {
+    var parameters: FormData? {
         switch self {
-        case .token(let code, let id, let secret, let redirect, let grandType, let refreshToken):
-            var p = [MultipartForm.Part(name: "client_id", value: id),
-                         MultipartForm.Part(name: "client_secret", value: secret),
-                         MultipartForm.Part(name: "grand_type", value: grandType)]
+        case .token(let code, let grandType, let refreshToken):
+            // мега костыль, который должен работать но нефига.
+            var a = FormData(boundary: UUID().uuidString)
+            a.addField(name: "client_id", value: CLIENT_ID)
+            a.addField(name: "client_secret", value: CLIENT_SECRET)
+            a.addField(name: "grand_type", value: grandType)
+            
+            //var p = [MultipartForm.Part(name: "client_id", value: CLIENT_ID),
+            //             MultipartForm.Part(name: "client_secret", value: CLIENT_SECRET),
+            //             MultipartForm.Part(name: "grand_type", value: grandType)]
             
             if code != nil {
-                p.append(MultipartForm.Part(name: "code", value: code!))
-            }
-            else if redirect != nil {
-                p.append(MultipartForm.Part(name: "redirect_uri", value: redirect!))
+                //p.append(MultipartForm.Part(name: "code", value: code!))
+                //p.append(MultipartForm.Part(name: "redirect_uri", value: REDIRECT_URI))
+                a.addField(name: "code", value: code!)
+                a.addField(name: "redirect_uri", value: REDIRECT_URI)
             }
             else if refreshToken != nil {
-                p.append(MultipartForm.Part(name: "refresh_token", value: refreshToken!))
+                //p.append(MultipartForm.Part(name: "refresh_token", value: refreshToken!))
+                a.addField(name: "refresh_token", value: refreshToken!)
             }
             
-            return MultipartForm(parts: p)
+            //return MultipartForm(parts: p)
+            return a
         case .getAnime, .getUser, .whoami:
             return nil
         }
