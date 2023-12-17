@@ -134,7 +134,6 @@
 				80869AED2B18EA9000E8730E /* Assets.xcassets */,
 				80869AEF2B18EA9000E8730E /* Preview Content */,
 				805B22FC2B1A4FD500BF9A1F /* Const.swift */,
-				80606E082B2E5847009A7B2D /* FormData.swift */,
 			);
 			path = Shikimori;
 			sourceTree = "<group>";
@@ -166,6 +165,7 @@
 		80F900F32B18FB69001F937F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				80606E082B2E5847009A7B2D /* FormData.swift */,
 				803AD7942B2B419600356E1F /* Client */,
 				803DAE152B1B30F500D3A42B /* Protocols */,
 				80E16F082B1905C200A27323 /* APIRouter.swift */,
