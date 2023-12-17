@@ -29,28 +29,20 @@ enum APIRouter {
     var parameters: FormData? {
         switch self {
         case .token(let code, let grandType, let refreshToken):
-            // мега костыль, который должен работать но нефига.
-            var a = FormData(boundary: UUID().uuidString)
+            var a = FormData()
             a.addField(name: "client_id", value: CLIENT_ID)
             a.addField(name: "client_secret", value: CLIENT_SECRET)
-            a.addField(name: "grand_type", value: grandType)
+            a.addField(name: "grant_type", value: grandType)
             
-            //var p = [MultipartForm.Part(name: "client_id", value: CLIENT_ID),
-            //             MultipartForm.Part(name: "client_secret", value: CLIENT_SECRET),
-            //             MultipartForm.Part(name: "grand_type", value: grandType)]
             
             if code != nil {
-                //p.append(MultipartForm.Part(name: "code", value: code!))
-                //p.append(MultipartForm.Part(name: "redirect_uri", value: REDIRECT_URI))
                 a.addField(name: "code", value: code!)
                 a.addField(name: "redirect_uri", value: REDIRECT_URI)
             }
             else if refreshToken != nil {
-                //p.append(MultipartForm.Part(name: "refresh_token", value: refreshToken!))
                 a.addField(name: "refresh_token", value: refreshToken!)
             }
-            
-            //return MultipartForm(parts: p)
+            a.complete()
             return a
         case .getAnime, .getUser, .whoami:
             return nil
