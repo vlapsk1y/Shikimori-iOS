@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+    @State var auth = AuthorizationModel()
     
     var body: some View {
         VStack {
@@ -18,7 +18,7 @@ struct LoginView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 40))
                 .padding()
             Button(action: {
-                AuthorizationModel().authInShikimori()
+                auth.authInShikimori()
             }, label: {
                 Text("Войти")
                     .frame(width: 300)

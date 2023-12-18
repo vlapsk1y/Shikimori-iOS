@@ -37,6 +37,8 @@
 /* Begin PBXFileReference section */
 		6BB3A6D3B24FDC3039D80D62 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.debug.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
 		8013EAE92B2449D900FD9A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		801A3F372B30488800E63BC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		801A3F382B3048E800E63BC6 /* ghlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghlogo.png; sourceTree = "<group>"; };
 		803AD7952B2B41A700356E1F /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		803DAE162B1B310900D3A42B /* UsersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocol.swift; sourceTree = "<group>"; };
 		803DAE1A2B1B32C100D3A42B /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
@@ -106,6 +108,8 @@
 		80869ADD2B18EA8E00E8730E = {
 			isa = PBXGroup;
 			children = (
+				801A3F382B3048E800E63BC6 /* ghlogo.png */,
+				801A3F372B30488800E63BC6 /* README.md */,
 				80869AE82B18EA8E00E8730E /* Shikimori */,
 				80869AE72B18EA8E00E8730E /* Products */,
 				D738A08E0E2681F88920EDDC /* Pods */,

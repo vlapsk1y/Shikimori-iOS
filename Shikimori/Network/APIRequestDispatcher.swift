@@ -9,7 +9,7 @@ import Foundation
 
 class APIRequestDispatcher {
     
-    class func request<T: Decodable>(apiRouter: APIRouter) async throws -> T {
+    class func request<T: Decodable, X: Error>(apiRouter: APIRouter) async throws -> (T, X) {
         var components = URLComponents()
         components.host = DOMAIN_API
         components.scheme = "https"
@@ -27,7 +27,7 @@ class APIRequestDispatcher {
                 return try await withCheckedThrowingContinuation { continuation in
                     let dataTask = session.dataTask(with: urlRequest) { data, response, error in
                         if let error = error {
-                            return continuation.resume(with: .failure(error))
+                            
                         }
 
                         guard let data = data else {
