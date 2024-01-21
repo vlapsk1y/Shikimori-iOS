@@ -23,6 +23,15 @@ struct Token {
         case scope
         case createdAt = "created_at"
     }
+    
+    init(accessToken: String?, tokenType: String?, expiresIn: Int?, refreshToken: String?, scope: String?, createdAt: Int?) {
+        self.accessToken = accessToken
+        self.tokenType = tokenType
+        self.expiresIn = expiresIn
+        self.refreshToken = refreshToken
+        self.scope = scope
+        self.createdAt = createdAt
+    }
 }
 
 extension Token: Decodable {

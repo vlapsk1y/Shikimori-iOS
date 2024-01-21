@@ -7,54 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45806789C52A5DE0713A404C7DEC7EC7 /* Pods-Shikimori-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA55357F91308DB08FC19DD3B40D49A9 /* Pods-Shikimori-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		770723CFEAD3F83E0FDA0397D6D60188 /* MultipartForm-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBF2ADD9A2EAA9189A2B93FB35D54C8 /* MultipartForm-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B964F75D8F40599A675D340D1794D24A /* Pods-Shikimori-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3543469C45AC93ED89A246BE2212A01 /* Pods-Shikimori-dummy.m */; };
-		C6CF91FF1B64AE1A9A6F4505D76BF043 /* MultipartForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116BF9581AE2C9721166E6E49A6CFB0 /* MultipartForm.swift */; };
-		C973E0A86EA524FA4FB22449422D23B0 /* MultipartForm-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E620977D0279EE76541DEE4AEE31B56D /* MultipartForm-dummy.m */; };
-		D7C98FFBCACE86C6033F7F7CCC55BA3B /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914D2787B4E9CBCC30F08080187D843 /* Data+Helpers.swift */; };
+		6951F7E0D4C5CF301F4DBB2E8949CB0A /* Pods-Shikimori-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9AF6101D12363A6BDC7DBAE6D0261E /* Pods-Shikimori-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6DECB692C0793FED28F353FF18F3DDB3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EE6345FE13C37076EB164752897606D3;
-			remoteInfo = MultipartForm;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		11011D9F5D862519BC80A3D3B1C3661B /* MultipartForm.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MultipartForm.modulemap; sourceTree = "<group>"; };
 		12C7020CED865F18C14123B97652544F /* Pods-Shikimori */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Shikimori"; path = "libPods-Shikimori.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C2C2D3C6DF5874ADBC2AA142A71C45E /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
-		3F6AC6DCD096E8C57296DF68A732BDF5 /* Pods-Shikimori-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shikimori-acknowledgements.plist"; sourceTree = "<group>"; };
-		521D0C1CEBC02A33C8DD29DFCDB21C1F /* Pods-Shikimori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shikimori.release.xcconfig"; sourceTree = "<group>"; };
-		86CD6B07C86C44AA4DCA15FFDD12B46F /* Pods-Shikimori-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Shikimori-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8AF1F07CE8B2013DA50B18629E1D715E /* MultipartForm-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultipartForm-prefix.pch"; sourceTree = "<group>"; };
-		8FB0FD3E109C1DFA7D0992C28E6857A7 /* Pods-Shikimori.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Shikimori.modulemap"; sourceTree = "<group>"; };
-		936E70D2AEBAA488AF74720CC9D8DCAB /* MultipartForm */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = MultipartForm; path = libMultipartForm.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CBF2ADD9A2EAA9189A2B93FB35D54C8 /* MultipartForm-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MultipartForm-umbrella.h"; sourceTree = "<group>"; };
+		1D6A9FF2E87DD66003809FE4B4A54637 /* Pods-Shikimori-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Shikimori-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49F99AA103C785D2709C5C8287800ABA /* Pods-Shikimori-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shikimori-acknowledgements.plist"; sourceTree = "<group>"; };
+		4A9AF6101D12363A6BDC7DBAE6D0261E /* Pods-Shikimori-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shikimori-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA55357F91308DB08FC19DD3B40D49A9 /* Pods-Shikimori-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shikimori-umbrella.h"; sourceTree = "<group>"; };
-		C116BF9581AE2C9721166E6E49A6CFB0 /* MultipartForm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartForm.swift; path = Sources/MultipartForm/MultipartForm.swift; sourceTree = "<group>"; };
-		CF13C3ADD61A1FF7FE4AEA0F4404EB57 /* MultipartForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MultipartForm.debug.xcconfig; sourceTree = "<group>"; };
-		D3543469C45AC93ED89A246BE2212A01 /* Pods-Shikimori-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shikimori-dummy.m"; sourceTree = "<group>"; };
-		D914D2787B4E9CBCC30F08080187D843 /* Data+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Helpers.swift"; path = "Sources/MultipartForm/Data+Helpers.swift"; sourceTree = "<group>"; };
-		E620977D0279EE76541DEE4AEE31B56D /* MultipartForm-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MultipartForm-dummy.m"; sourceTree = "<group>"; };
-		E9288BE4A75246C43D6ECD9BF35F83B0 /* MultipartForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MultipartForm.release.xcconfig; sourceTree = "<group>"; };
+		D1EFBBFE1041B3A0AD51846EB9AF6B54 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
+		EE161FFD6DC532F4B9803656D250E34C /* Pods-Shikimori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shikimori.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C3F0CC5FEFE6D6015082D9C4A5ACFD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C85292C6E9525080FE1221F5987C7697 /* Frameworks */ = {
+		477CB60208D5AF640F979FE3C2DD78C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,44 +31,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11CF2130C93BF9E56E0BB9F147EC704D /* Pods-Shikimori */ = {
+		460A12928477610075A7B675A25C1F1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FB0FD3E109C1DFA7D0992C28E6857A7 /* Pods-Shikimori.modulemap */,
-				86CD6B07C86C44AA4DCA15FFDD12B46F /* Pods-Shikimori-acknowledgements.markdown */,
-				3F6AC6DCD096E8C57296DF68A732BDF5 /* Pods-Shikimori-acknowledgements.plist */,
-				D3543469C45AC93ED89A246BE2212A01 /* Pods-Shikimori-dummy.m */,
-				AA55357F91308DB08FC19DD3B40D49A9 /* Pods-Shikimori-umbrella.h */,
-				3C2C2D3C6DF5874ADBC2AA142A71C45E /* Pods-Shikimori.debug.xcconfig */,
-				521D0C1CEBC02A33C8DD29DFCDB21C1F /* Pods-Shikimori.release.xcconfig */,
+				12C7020CED865F18C14123B97652544F /* Pods-Shikimori */,
 			);
-			name = "Pods-Shikimori";
-			path = "Target Support Files/Pods-Shikimori";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		44DB4DAD696675340EC445FC8C3FC28C /* Targets Support Files */ = {
+		5AFCF267B2710514C676B3DD7E8B74DD /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				11CF2130C93BF9E56E0BB9F147EC704D /* Pods-Shikimori */,
+				89B0927ABE49601BFBFF85B2C1DAA8AF /* Pods-Shikimori */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5822BB30737AD5BD285ECFF4346E1454 /* Pods */ = {
+		89B0927ABE49601BFBFF85B2C1DAA8AF /* Pods-Shikimori */ = {
 			isa = PBXGroup;
 			children = (
-				DEFDF16D69BBA30D9BAAAA87BE0AE582 /* MultipartForm */,
+				1D6A9FF2E87DD66003809FE4B4A54637 /* Pods-Shikimori-acknowledgements.markdown */,
+				49F99AA103C785D2709C5C8287800ABA /* Pods-Shikimori-acknowledgements.plist */,
+				4A9AF6101D12363A6BDC7DBAE6D0261E /* Pods-Shikimori-dummy.m */,
+				D1EFBBFE1041B3A0AD51846EB9AF6B54 /* Pods-Shikimori.debug.xcconfig */,
+				EE161FFD6DC532F4B9803656D250E34C /* Pods-Shikimori.release.xcconfig */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5D808467E20F02E1F98FB1DABFFE9524 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				936E70D2AEBAA488AF74720CC9D8DCAB /* MultipartForm */,
-				12C7020CED865F18C14123B97652544F /* Pods-Shikimori */,
-			);
-			name = Products;
+			name = "Pods-Shikimori";
+			path = "Target Support Files/Pods-Shikimori";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -109,9 +65,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				5822BB30737AD5BD285ECFF4346E1454 /* Pods */,
-				5D808467E20F02E1F98FB1DABFFE9524 /* Products */,
-				44DB4DAD696675340EC445FC8C3FC28C /* Targets Support Files */,
+				460A12928477610075A7B675A25C1F1B /* Products */,
+				5AFCF267B2710514C676B3DD7E8B74DD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,47 +77,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DEFDF16D69BBA30D9BAAAA87BE0AE582 /* MultipartForm */ = {
-			isa = PBXGroup;
-			children = (
-				D914D2787B4E9CBCC30F08080187D843 /* Data+Helpers.swift */,
-				C116BF9581AE2C9721166E6E49A6CFB0 /* MultipartForm.swift */,
-				F6F691BF321A088343496B96184F0A26 /* Support Files */,
-			);
-			name = MultipartForm;
-			path = MultipartForm;
-			sourceTree = "<group>";
-		};
-		F6F691BF321A088343496B96184F0A26 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				11011D9F5D862519BC80A3D3B1C3661B /* MultipartForm.modulemap */,
-				E620977D0279EE76541DEE4AEE31B56D /* MultipartForm-dummy.m */,
-				8AF1F07CE8B2013DA50B18629E1D715E /* MultipartForm-prefix.pch */,
-				9CBF2ADD9A2EAA9189A2B93FB35D54C8 /* MultipartForm-umbrella.h */,
-				CF13C3ADD61A1FF7FE4AEA0F4404EB57 /* MultipartForm.debug.xcconfig */,
-				E9288BE4A75246C43D6ECD9BF35F83B0 /* MultipartForm.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MultipartForm";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		975A6EE600E2E3D546355C6E9D2D836C /* Headers */ = {
+		DB595FDE0978B797A195257A8B3F6DB8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45806789C52A5DE0713A404C7DEC7EC7 /* Pods-Shikimori-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B85ABD86BEA36FB0A4CB85F4BF40ACF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				770723CFEAD3F83E0FDA0397D6D60188 /* MultipartForm-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,38 +92,19 @@
 /* Begin PBXNativeTarget section */
 		2199D8208A2CDBA23C31F413A8674F61 /* Pods-Shikimori */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6270D3444B3CB6C77C98CDCC454F841 /* Build configuration list for PBXNativeTarget "Pods-Shikimori" */;
+			buildConfigurationList = EDA3D11E0D774603EABA9C21E7ED977E /* Build configuration list for PBXNativeTarget "Pods-Shikimori" */;
 			buildPhases = (
-				975A6EE600E2E3D546355C6E9D2D836C /* Headers */,
-				7A872A6D90DFEF69C45752CF38BBF51E /* Sources */,
-				2C3F0CC5FEFE6D6015082D9C4A5ACFD2 /* Frameworks */,
+				DB595FDE0978B797A195257A8B3F6DB8 /* Headers */,
+				44C663CC02F9EA34F03BD35B7E0287D2 /* Sources */,
+				477CB60208D5AF640F979FE3C2DD78C9 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1F38F56FEFB50AFCB1520AB32780BB1E /* PBXTargetDependency */,
 			);
 			name = "Pods-Shikimori";
 			productName = "Pods-Shikimori";
 			productReference = 12C7020CED865F18C14123B97652544F /* Pods-Shikimori */;
-			productType = "com.apple.product-type.library.static";
-		};
-		EE6345FE13C37076EB164752897606D3 /* MultipartForm */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02AE66E0AA18F95B17D4E2A6024C0A8F /* Build configuration list for PBXNativeTarget "MultipartForm" */;
-			buildPhases = (
-				9B85ABD86BEA36FB0A4CB85F4BF40ACF /* Headers */,
-				FB46466BA569351A74C168B3C8F40278 /* Sources */,
-				C85292C6E9525080FE1221F5987C7697 /* Frameworks */,
-				FA1BFDF71AD1512E5A4ABB4590C15F24 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MultipartForm;
-			productName = MultipartForm;
-			productReference = 936E70D2AEBAA488AF74720CC9D8DCAB /* MultipartForm */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -223,102 +125,30 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5D808467E20F02E1F98FB1DABFFE9524 /* Products */;
+			productRefGroup = 460A12928477610075A7B675A25C1F1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE6345FE13C37076EB164752897606D3 /* MultipartForm */,
 				2199D8208A2CDBA23C31F413A8674F61 /* Pods-Shikimori */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		FA1BFDF71AD1512E5A4ABB4590C15F24 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/MultipartForm/MultipartForm.modulemap",
-				"${PODS_ROOT}/Headers/Public/MultipartForm/MultipartForm-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/MultipartForm-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MultipartForm/MultipartForm.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MultipartForm/MultipartForm-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		7A872A6D90DFEF69C45752CF38BBF51E /* Sources */ = {
+		44C663CC02F9EA34F03BD35B7E0287D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B964F75D8F40599A675D340D1794D24A /* Pods-Shikimori-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB46466BA569351A74C168B3C8F40278 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7C98FFBCACE86C6033F7F7CCC55BA3B /* Data+Helpers.swift in Sources */,
-				C6CF91FF1B64AE1A9A6F4505D76BF043 /* MultipartForm.swift in Sources */,
-				C973E0A86EA524FA4FB22449422D23B0 /* MultipartForm-dummy.m in Sources */,
+				6951F7E0D4C5CF301F4DBB2E8949CB0A /* Pods-Shikimori-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1F38F56FEFB50AFCB1520AB32780BB1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MultipartForm;
-			target = EE6345FE13C37076EB164752897606D3 /* MultipartForm */;
-			targetProxy = 6DECB692C0793FED28F353FF18F3DDB3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		139D94E09520C7CE54A244E02CA0C38F /* Release */ = {
+		027167C498808F9416425D27871A23B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9288BE4A75246C43D6ECD9BF35F83B0 /* MultipartForm.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MultipartForm/MultipartForm-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/MultipartForm/MultipartForm.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MultipartForm;
-				PRODUCT_NAME = MultipartForm;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		573A77B7430734EC2193ACB64F4FBE05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 521D0C1CEBC02A33C8DD29DFCDB21C1F /* Pods-Shikimori.release.xcconfig */;
+			baseConfigurationReference = D1EFBBFE1041B3A0AD51846EB9AF6B54 /* Pods-Shikimori.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -327,30 +157,6 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Shikimori/Pods-Shikimori.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		77D13FF6C7AB9D6C1CF2491F68C01660 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C2C2D3C6DF5874ADBC2AA142A71C45E /* Pods-Shikimori.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Shikimori/Pods-Shikimori.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -360,6 +166,28 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		5AB2A75025C866D47A8FB46AD748EB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE161FFD6DC532F4B9803656D250E34C /* Pods-Shikimori.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -489,42 +317,9 @@
 			};
 			name = Release;
 		};
-		C754D531ED6EBE7CD4AC64B7BCD7ACF0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF13C3ADD61A1FF7FE4AEA0F4404EB57 /* MultipartForm.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MultipartForm/MultipartForm-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MODULEMAP_FILE = Headers/Public/MultipartForm/MultipartForm.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MultipartForm;
-				PRODUCT_NAME = MultipartForm;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02AE66E0AA18F95B17D4E2A6024C0A8F /* Build configuration list for PBXNativeTarget "MultipartForm" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C754D531ED6EBE7CD4AC64B7BCD7ACF0 /* Debug */,
-				139D94E09520C7CE54A244E02CA0C38F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -534,11 +329,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6270D3444B3CB6C77C98CDCC454F841 /* Build configuration list for PBXNativeTarget "Pods-Shikimori" */ = {
+		EDA3D11E0D774603EABA9C21E7ED977E /* Build configuration list for PBXNativeTarget "Pods-Shikimori" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77D13FF6C7AB9D6C1CF2491F68C01660 /* Debug */,
-				573A77B7430734EC2193ACB64F4FBE05 /* Release */,
+				027167C498808F9416425D27871A23B2 /* Debug */,
+				5AB2A75025C866D47A8FB46AD748EB33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

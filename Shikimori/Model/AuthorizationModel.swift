@@ -8,25 +8,36 @@
 import Foundation
 import AuthenticationServices
 import Combine
+import SwiftUI
 
 class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresentationContextProviding {
     typealias ASPresentationAnchor = UIWindow
     var session: ASWebAuthenticationSession? = nil
+    @Published var hasError: Bool = false
+    var message: String = String()
+
     
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         return ASPresentationAnchor()
     }
     
-    func authInShikimori() {
+    func authInShikimori() -> Void {
         session = ASWebAuthenticationSession(url: URL(string: AUTH_URL)!, callbackURLScheme: "shikimoriswift%3A%2Fauth", completionHandler: { callback, error in
             guard error == nil, let success = callback else { return }
             let code = NSURLComponents(string: (success.absoluteString))?.queryItems?.filter({ $0.name == "code" }).first
             
-            Task.init {
+            Task {
                 do {
-                    let token = try await AuthClient().token(code: code?.value)
-                    print(token.accessToken!)
-                } catch {
+                    try await AuthClient().token(code: code?.value) { (result: Result<Token, APIRequestError>) in
+                        switch result {
+                        case .success(let x):
+                            self.getToken(token: x)
+                        case .failure(let e):
+                            self.message = e.localizedDescription
+                            self.hasError.toggle()
+                        }
+                    }
+                } catch(let error) {
                     print(error)
                 }
             }
@@ -35,8 +46,8 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
         session?.start()
     }
     
-    private func getToken(token: Token) async {
-        
+    private func getToken(token: Token) {
+        print(token.accessToken)
     }
     
     private var defaults = UserDefaults.standard

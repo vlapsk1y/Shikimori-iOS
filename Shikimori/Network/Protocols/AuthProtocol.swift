@@ -8,6 +8,6 @@
 import Foundation
 
 protocol AuthProtocol {
-    func token(code: String?) async throws -> Token
-    func refreshToken(id: String, secret: String, refresh_token: String) async throws -> Token
+    func token(code: String?, completion: @escaping (Result<Token, APIRequestError>) -> Void) async throws -> Void
+//    func refreshToken(id: String, secret: String, refresh_token: String) async throws -> Token
 }
