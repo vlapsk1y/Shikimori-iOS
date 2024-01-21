@@ -9,7 +9,7 @@ import Foundation
 
 class AuthClient: AuthProtocol {
     func token(code: String?, completion: @escaping (Result<Token, APIRequestError>) -> Void) async throws -> Void {
-        try await APIRequestDispatcher.request(apiRouter: .token(code: code, grandType: "access_token", refreshToken: nil)) { (result: Result<Token, APIRequestError>) in
+        try await APIRequestDispatcher.request(apiRouter: .token(code: code, grandType: "authorization_code", refreshToken: nil)) { (result: Result<Token, APIRequestError>) in
             switch result {
             case .success(let success):
                 completion(.success(success))
