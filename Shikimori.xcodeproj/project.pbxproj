@@ -19,6 +19,7 @@
 		805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC342B1E3BD70072944D /* FullStatuses.swift */; };
 		805BBC3D2B1E3BD70072944D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC352B1E3BD70072944D /* User.swift */; };
 		80606E092B2E5847009A7B2D /* FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80606E082B2E5847009A7B2D /* FormData.swift */; };
+		806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806EB8372B5EF049008360B9 /* AuthManager.swift */; };
 		8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1812B23275200A2A74D /* AuthorizationModel.swift */; };
 		8078F1842B2327A300A2A74D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1832B2327A300A2A74D /* LoginView.swift */; };
 		807EAF982B22F34400C79358 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807EAF972B22F34400C79358 /* AuthProtocol.swift */; };
@@ -51,6 +52,7 @@
 		805BBC342B1E3BD70072944D /* FullStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStatuses.swift; sourceTree = "<group>"; };
 		805BBC352B1E3BD70072944D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80606E082B2E5847009A7B2D /* FormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormData.swift; sourceTree = "<group>"; };
+		806EB8372B5EF049008360B9 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8078F1812B23275200A2A74D /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
 		8078F1832B2327A300A2A74D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		807EAF972B22F34400C79358 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				80869AED2B18EA9000E8730E /* Assets.xcassets */,
 				80869AEF2B18EA9000E8730E /* Preview Content */,
 				805B22FC2B1A4FD500BF9A1F /* Const.swift */,
+				806EB8372B5EF049008360B9 /* AuthManager.swift */,
 			);
 			path = Shikimori;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				80EC72DC2B22569200277419 /* NameValue.swift in Sources */,
 				807EAF9A2B22F5D600C79358 /* Token.swift in Sources */,
 				805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */,
+				806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
 				80606E092B2E5847009A7B2D /* FormData.swift in Sources */,

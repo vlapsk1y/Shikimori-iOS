@@ -52,19 +52,19 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
     
     private var defaults = UserDefaults.standard
     func isLogged() -> Bool {
-        defaults.bool(forKey: "islogged")
+        AuthManager.shared.isLogged
     }
     
     private func setToken(access: String, refresh: String) -> Void {
-        defaults.set(access, forKey: "access_token")
-        defaults.set(refresh, forKey: "refresh_token")
-        defaults.set(true, forKey: "islogged")
+        defaults.set(access, forKey: DEAFULTS_ACCESS_TOKEN)
+        defaults.set(refresh, forKey: DEFAULTS_REFRESH_TOKEN)
+        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
     }
     
     func deuath() -> Void {
-        defaults.removeObject(forKey: "access_token")
-        defaults.removeObject(forKey: "refresh_token")
-        defaults.removeObject(forKey: "islogged")
+        defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
+        defaults.removeObject(forKey: DEFAULTS_REFRESH_TOKEN)
+        defaults.set(false, forKey: DEFAULTS_ISLOGGED)
     }
     
 }
