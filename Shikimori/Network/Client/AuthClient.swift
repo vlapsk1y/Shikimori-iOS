@@ -19,11 +19,17 @@ class AuthClient: AuthProtocol {
         }
     }
     
-//    func refreshToken(id: String, secret: String, refresh_token: String) async throws -> Token {
-//        let response: Token = try await APIRequestDispatcher.request(apiRouter: .token(code: nil, grandType: "refresh_token", refreshToken: refresh_token))
-//        
-//        return response
-//    }
+    func refreshToken(id: String, secret: String, refresh_token: String, completion: @escaping (Result<Token, APIRequestError>) -> Void) async throws -> Void {
+        try await APIRequestDispatcher.request(apiRouter: .token(code: nil, grandType: "refresh_token", refreshToken: refresh_token)) { (result: Result<Token, APIRequestError>) in
+            switch result {
+            case .success(let x):
+                completion(.success(x))
+            case .failure(let e):
+                completion(.failure(e))
+            }
+            
+        }
+    }
     
     
 }
