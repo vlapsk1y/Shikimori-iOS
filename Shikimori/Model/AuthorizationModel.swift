@@ -50,7 +50,6 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
         AuthManager.shared.setToken(access: token.accessToken!, refresh: token.refreshToken!)
     }
     
-    private var defaults = UserDefaults.standard
     func isLogged() -> Bool {
         AuthManager.shared.isLogged
     }
