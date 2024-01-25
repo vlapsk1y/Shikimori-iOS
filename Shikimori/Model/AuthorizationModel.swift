@@ -47,26 +47,11 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
     }
     
     private func getToken(token: Token) {
-        setToken(access: token.accessToken!, refresh: token.refreshToken!)
+        AuthManager.shared.setToken(access: token.accessToken!, refresh: token.refreshToken!)
     }
     
     private var defaults = UserDefaults.standard
     func isLogged() -> Bool {
         AuthManager.shared.isLogged
     }
-    
-    private func setToken(access: String, refresh: String) -> Void {
-        defaults.set(access, forKey: DEAFULTS_ACCESS_TOKEN)
-        defaults.set(refresh, forKey: DEFAULTS_REFRESH_TOKEN)
-        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
-        defaults.set(NSDate().timeIntervalSince1970, forKey: DEFAULTS_TIMESTAMP)
-    }
-    
-    func deuath() -> Void {
-        defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
-        defaults.removeObject(forKey: DEFAULTS_REFRESH_TOKEN)
-        defaults.removeObject(forKey: DEFAULTS_TIMESTAMP)
-        defaults.set(false, forKey: DEFAULTS_ISLOGGED)
-    }
-    
 }
