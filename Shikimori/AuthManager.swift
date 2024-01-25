@@ -17,7 +17,7 @@ class AuthManager {
     
     var isLogged: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: "islogged")
+            return UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED)
         }
     }
     
