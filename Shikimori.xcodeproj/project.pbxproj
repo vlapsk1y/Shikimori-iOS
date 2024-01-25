@@ -109,6 +109,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		804A12792B62A857005479B6 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		80869ADD2B18EA8E00E8730E = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +174,7 @@
 		80F900F12B18F207001F937F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				804A12792B62A857005479B6 /* Tabs */,
 				8078F1832B2327A300A2A74D /* LoginView.swift */,
 			);
 			path = View;
