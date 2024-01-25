@@ -10,6 +10,11 @@
 		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
 		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
+		804A127B2B62AC26005479B6 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A127A2B62AC26005479B6 /* NewsView.swift */; };
+		804A127D2B62AC98005479B6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A127C2B62AC98005479B6 /* ListView.swift */; };
+		804A127F2B62ACD2005479B6 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A127E2B62ACD2005479B6 /* NewsModel.swift */; };
+		804A12812B62ACDB005479B6 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A12802B62ACDB005479B6 /* ListModel.swift */; };
+		804A12832B62AE20005479B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A12822B62AE20005479B6 /* SettingsView.swift */; };
 		8056B9202B614C9C00E19465 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056B91F2B614C9C00E19465 /* Config.swift */; };
 		805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B22FC2B1A4FD500BF9A1F /* Const.swift */; };
 		805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B22FE2B1A5BEA00BF9A1F /* APIRequestError.swift */; };
@@ -44,6 +49,11 @@
 		803AD7952B2B41A700356E1F /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		803DAE162B1B310900D3A42B /* UsersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocol.swift; sourceTree = "<group>"; };
 		803DAE1A2B1B32C100D3A42B /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
+		804A127A2B62AC26005479B6 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		804A127C2B62AC98005479B6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		804A127E2B62ACD2005479B6 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		804A12802B62ACDB005479B6 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		804A12822B62AE20005479B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8056B91F2B614C9C00E19465 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		805B22FC2B1A4FD500BF9A1F /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		805B22FE2B1A5BEA00BF9A1F /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
@@ -112,6 +122,9 @@
 		804A12792B62A857005479B6 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				804A127A2B62AC26005479B6 /* NewsView.swift */,
+				804A127C2B62AC98005479B6 /* ListView.swift */,
+				804A12822B62AE20005479B6 /* SettingsView.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -167,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				8078F1812B23275200A2A74D /* AuthorizationModel.swift */,
+				804A127E2B62ACD2005479B6 /* NewsModel.swift */,
+				804A12802B62ACDB005479B6 /* ListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +334,7 @@
 				803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */,
 				805BBC392B1E3BD70072944D /* Stats.swift in Sources */,
 				805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */,
+				804A127F2B62ACD2005479B6 /* NewsModel.swift in Sources */,
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				8056B9202B614C9C00E19465 /* Config.swift in Sources */,
@@ -326,10 +342,14 @@
 				805BBC3D2B1E3BD70072944D /* User.swift in Sources */,
 				803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */,
 				80E16F092B1905C200A27323 /* APIRouter.swift in Sources */,
+				804A12812B62ACDB005479B6 /* ListModel.swift in Sources */,
 				8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */,
 				80EC72DC2B22569200277419 /* NameValue.swift in Sources */,
 				807EAF9A2B22F5D600C79358 /* Token.swift in Sources */,
+				804A127B2B62AC26005479B6 /* NewsView.swift in Sources */,
+				804A127D2B62AC98005479B6 /* ListView.swift in Sources */,
 				805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */,
+				804A12832B62AE20005479B6 /* SettingsView.swift in Sources */,
 				806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
