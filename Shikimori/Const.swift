@@ -7,7 +7,8 @@
 
 let DOMAIN_API: String = "shikimori.one"
 let REDIRECT_URI: String = "shikimoriswift://auth"
-let AUTH_URL: String = "https://shikimori.one/oauth/authorize?client_id=1H4FlwBsbLa8kdtSUtqal1rvbEfo4z9FsodKjWsKNB4&redirect_uri=shikimoriswift%3A%2F%2Fauth&response_type=code&scope=user_rates+comments+topics"
+let grants: String = "user_rates+comments+topics"
+let AUTH_URL: String = "https://shikimori.one/oauth/authorize?client_id=\(CLIENT_ID)&redirect_uri=\(REDIRECT_URI.utf8)&response_type=code&scope=\(grants)"
 
 let DEAFULTS_ACCESS_TOKEN: String = "access_token"
 let DEFAULTS_REFRESH_TOKEN: String = "refresh_token"
