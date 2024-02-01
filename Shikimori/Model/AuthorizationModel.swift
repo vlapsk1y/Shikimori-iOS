@@ -21,7 +21,7 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
         return ASPresentationAnchor()
     }
     
-    func authInShikimori() -> Void {
+    func authInShikimori(completion: @escaping (Bool) -> Void) {
         session = ASWebAuthenticationSession(url: URL(string: AUTH_URL)!, callbackURLScheme: "shikimoriswift%3A%2Fauth", completionHandler: { callback, error in
             guard error == nil, let success = callback else { return }
             let code = NSURLComponents(string: (success.absoluteString))?.queryItems?.filter({ $0.name == "code" }).first
@@ -32,13 +32,16 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
                         switch result {
                         case .success(let x):
                             self.getToken(token: x)
+                            completion(true)
                         case .failure(let e):
                             self.message = e.localizedDescription
                             self.hasError.toggle()
+                            completion(false)
                         }
                     }
                 } catch(let error) {
                     print(error)
+                    completion(false)
                 }
             }
         })

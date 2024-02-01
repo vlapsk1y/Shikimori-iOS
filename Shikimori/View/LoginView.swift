@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isLogged: Bool
     @ObservedObject private var auth = AuthorizationModel()
     var body: some View {
         VStack {
@@ -27,7 +28,9 @@ struct LoginView: View {
                 .font(.caption)
                 .foregroundStyle(.gray)
             Button(action: {
-                auth.authInShikimori()
+                auth.authInShikimori() { x in
+                    isLogged = x
+                }
             }, label: {
                 Text("Войти")
                     .frame(width: 300, height: 30)
@@ -43,5 +46,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(isLogged: .constant(false))
 }

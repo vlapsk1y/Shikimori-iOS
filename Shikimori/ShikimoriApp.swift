@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct ShikimoriApp: App {
+    @State var islogged: Bool = AuthManager.shared.isLogged
+    
     var body: some Scene {
         WindowGroup {
-            if AuthManager.shared.isLogged {
+            if islogged {
                 ContentView()
+                    .transition(.slide)
             } else {
-                LoginView()
+                LoginView(isLogged: $islogged)
+                    .transition(.slide)
             }
         }
     }
