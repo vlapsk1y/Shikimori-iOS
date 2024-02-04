@@ -9,5 +9,5 @@ import Foundation
 
 protocol TopicProtocol {
     func hot(limit: Int?, completion: @escaping (Result<[Topic], APIRequestError>) -> Void) async throws -> Void
-    func topics(page: Int?, limit: Int?, forum: String?, linked_id: Int?, linked_type: String?, type: String?) async throws -> Void
+    func topics(page: Int?, limit: Int?, forum: String?, linked_id: Int?, linked_type: String?, type: String?, completion: @escaping (Result<[Topic], APIRequestError>) -> Void) async throws -> Void
 }
