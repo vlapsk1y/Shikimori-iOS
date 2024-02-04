@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Topic: Decodable {
+struct Topic: Decodable, Identifiable {
     let id: Int
     let topicTitle, body, htmlBody, htmlFooter: String
     let createdAt: String
@@ -15,12 +15,12 @@ struct Topic: Decodable {
     let forum: Forum
     let user: User
     let type: String
-    let linkedID: Int
-    let linkedType: String
-    let linked: Linked
+    let linkedID: Int?
+    let linkedType: String?
+    let linked: Linked?
     let viewed: Bool
-    let event: String
-    let episode: Int
+    let event: String?
+    let episode: Int?
 
     enum CodingKeys: String, CodingKey {
         case id

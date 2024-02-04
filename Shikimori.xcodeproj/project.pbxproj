@@ -12,6 +12,7 @@
 		800A57952B6E754B00FA8311 /* Linked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57942B6E754B00FA8311 /* Linked.swift */; };
 		800A57992B6F5BCE00FA8311 /* TopicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */; };
 		800A579B2B6F5C2D00FA8311 /* TopicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579A2B6F5C2D00FA8311 /* TopicClient.swift */; };
+		800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579D2B6FD01400FA8311 /* TopicRow.swift */; };
 		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
 		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
@@ -53,6 +54,7 @@
 		800A57942B6E754B00FA8311 /* Linked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linked.swift; sourceTree = "<group>"; };
 		800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicProtocol.swift; sourceTree = "<group>"; };
 		800A579A2B6F5C2D00FA8311 /* TopicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicClient.swift; sourceTree = "<group>"; };
+		800A579D2B6FD01400FA8311 /* TopicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRow.swift; sourceTree = "<group>"; };
 		8013EAE92B2449D900FD9A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		801A3F372B30488800E63BC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		801A3F382B3048E800E63BC6 /* ghlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghlogo.png; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		800A579C2B6FCF3C00FA8311 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				800A579D2B6FD01400FA8311 /* TopicRow.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
 		803AD7942B2B419600356E1F /* Client */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		80869AE82B18EA8E00E8730E /* Shikimori */ = {
 			isa = PBXGroup;
 			children = (
+				800A579C2B6FCF3C00FA8311 /* UI Components */,
 				8013EAE92B2449D900FD9A13 /* Info.plist */,
 				80F900F42B18FDA9001F937F /* DTO */,
 				80F900F32B18FB69001F937F /* Network */,
@@ -385,6 +396,7 @@
 				804A12832B62AE20005479B6 /* SettingsView.swift in Sources */,
 				806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
+				800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
 				80606E092B2E5847009A7B2D /* FormData.swift in Sources */,
 				805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */,

@@ -52,8 +52,4 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
     private func getToken(token: Token) {
         AuthManager.shared.setToken(access: token.accessToken!, refresh: token.refreshToken!)
     }
-    
-    func isLogged() -> Bool {
-        AuthManager.shared.isLogged
-    }
 }

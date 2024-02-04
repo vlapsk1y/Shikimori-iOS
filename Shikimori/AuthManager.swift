@@ -20,15 +20,50 @@ class AuthManager {
             return UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED)
         }
     }
-    
-    func setToken(access: String, refresh: String) -> Void {
-        defaults.set(access, forKey: DEAFULTS_ACCESS_TOKEN)
-        defaults.set(refresh, forKey: DEFAULTS_REFRESH_TOKEN)
-        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
-        defaults.set(NSDate().timeIntervalSince1970, forKey: DEFAULTS_TIMESTAMP)
+    var access_token: String {
+        get {
+            return UserDefaults.standard.string(forKey: DEAFULTS_ACCESS_TOKEN)!
+        }
+        set {
+            defaults.set(newValue, forKey: DEAFULTS_ACCESS_TOKEN)
+        }
+    }
+    var refresh_token: String {
+        get {
+            return UserDefaults.standard.string(forKey: DEFAULTS_REFRESH_TOKEN)!
+        }
+        set {
+            defaults.set(newValue, forKey: DEFAULTS_REFRESH_TOKEN)
+        }
     }
     
-    func deuath() -> Void {
+    func updateToken() -> Void {
+        if !isLogged { return }
+        
+        Task {
+            do {
+                try await AuthClient().refreshToken(refresh_token: refresh_token) {
+                    (result: Result<Token, APIRequestError>) in
+                    switch result {
+                    case .success(let x):
+                        print("New token! access_token: \(x.accessToken!), refresh_token: \(x.refreshToken!), timestamp: \(x.expiresIn!)")
+                        self.setToken(access: x.accessToken!, refresh: x.refreshToken!)
+                    case .failure(_):
+                        break
+                    }
+                }
+            }
+        }
+    }
+    
+    func setToken(access: String, refresh: String) -> Void {
+        access_token = access
+        refresh_token = refresh
+        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
+        defaults.set(Int(NSDate().timeIntervalSince1970), forKey: DEFAULTS_TIMESTAMP)
+    }
+    
+    func deauth() -> Void {
         defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
         defaults.removeObject(forKey: DEFAULTS_REFRESH_TOKEN)
         defaults.removeObject(forKey: DEFAULTS_TIMESTAMP)

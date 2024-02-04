@@ -11,9 +11,9 @@ struct Linked: Decodable {
     let id: Int
     let name, russian: String
     let image: UserImage
-    let url, kind, score, status: String
-    let episodes, episodesAired: Int
-    let airedOn, releasedOn: Int
+    let url, kind, score, status: String?
+    let episodes, episodesAired: Int?
+    let airedOn, releasedOn: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, name, russian, image, url, kind, score, status, episodes
@@ -28,13 +28,13 @@ struct Linked: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
         self.russian = try container.decode(String.self, forKey: .russian)
         self.image = try container.decode(UserImage.self, forKey: .image)
-        self.url = try container.decode(String.self, forKey: .url)
-        self.kind = try container.decode(String.self, forKey: .kind)
-        self.score = try container.decode(String.self, forKey: .score)
-        self.status = try container.decode(String.self, forKey: .status)
-        self.episodes = try container.decode(Int.self, forKey: .episodes)
-        self.episodesAired = try container.decode(Int.self, forKey: .episodesAired)
-        self.airedOn = try container.decode(Int.self, forKey: .airedOn)
-        self.releasedOn = try container.decode(Int.self, forKey: .releasedOn)
+        self.url = try? container.decode(String.self, forKey: .url)
+        self.kind = try? container.decode(String.self, forKey: .kind)
+        self.score = try? container.decode(String.self, forKey: .score)
+        self.status = try? container.decode(String.self, forKey: .status)
+        self.episodes = try? container.decode(Int.self, forKey: .episodes)
+        self.episodesAired = try? container.decode(Int.self, forKey: .episodesAired)
+        self.airedOn = try? container.decode(Int.self, forKey: .airedOn)
+        self.releasedOn = try? container.decode(Int.self, forKey: .releasedOn)
     }
 }

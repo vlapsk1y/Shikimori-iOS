@@ -4,14 +4,14 @@ struct User {
     let id: Int
     let nickname, avatar: String
     let image: UserImage
-    let lastOnlineAt: String
+    let lastOnlineAt: String?
     let url: String
     let name: String?
     let sex: String?
     let fullYears: Int?
-    let lastOnline: String
+    let lastOnline: String?
     let website: String?
-    let banned: Bool
+    let banned: Bool?
     let about, aboutHTML: String?
     let commonInfo: [String]?
     let showComments: Bool?
@@ -45,21 +45,21 @@ extension User: Decodable {
         nickname = try container.decode(String.self, forKey: .nickname)
         avatar = try container.decode(String.self, forKey: .avatar)
         image = try container.decode(UserImage.self, forKey: .image)
-        lastOnlineAt = try container.decode(String.self, forKey: .lastOnlineAt)
+        lastOnlineAt = try? container.decode(String.self, forKey: .lastOnlineAt)
         url = try container.decode(String.self, forKey: .url)
-        name = try container.decode(String.self, forKey: .name)
-        sex = try container.decodeIfPresent(String.self, forKey: .sex)
-        fullYears = try container.decodeIfPresent(Int.self, forKey: .fullYears)
-        lastOnline = try container.decode(String.self, forKey: .lastOnline)
-        website = try container.decodeIfPresent(String.self, forKey: .website)
-        banned = try container.decode(Bool.self, forKey: .banned)
-        about = try container.decodeIfPresent(String.self, forKey: .about)
-        aboutHTML = try container.decodeIfPresent(String.self, forKey: .aboutHTML)
-        commonInfo = try container.decode([String].self, forKey: .commonInfo)
-        showComments = try container.decode(Bool.self, forKey: .showComments)
-        inFriends = try container.decode(Bool.self, forKey: .inFriends)
-        isIgnored = try container.decode(Bool.self, forKey: .isIgnored)
-        stats = try container.decode(Stats.self, forKey: .stats)
-        styleID = try container.decodeIfPresent(Int.self, forKey: .styleID)
+        name = try? container.decode(String.self, forKey: .name)
+        sex = try? container.decodeIfPresent(String.self, forKey: .sex)
+        fullYears = try? container.decodeIfPresent(Int.self, forKey: .fullYears)
+        lastOnline = try? container.decode(String.self, forKey: .lastOnline)
+        website = try? container.decodeIfPresent(String.self, forKey: .website)
+        banned = try? container.decode(Bool.self, forKey: .banned)
+        about = try? container.decodeIfPresent(String.self, forKey: .about)
+        aboutHTML = try? container.decodeIfPresent(String.self, forKey: .aboutHTML)
+        commonInfo = try? container.decode([String].self, forKey: .commonInfo)
+        showComments = try? container.decode(Bool.self, forKey: .showComments)
+        inFriends = try? container.decode(Bool.self, forKey: .inFriends)
+        isIgnored = try? container.decode(Bool.self, forKey: .isIgnored)
+        stats = try? container.decode(Stats.self, forKey: .stats)
+        styleID = try? container.decodeIfPresent(Int.self, forKey: .styleID)
     }
 }

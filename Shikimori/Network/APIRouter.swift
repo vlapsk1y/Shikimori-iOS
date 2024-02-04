@@ -5,6 +5,8 @@
 //  Created by vlapsk1y on 30.11.2023.
 //
 
+import Foundation
+
 enum APIRouter {
     
     // Topic methods
@@ -25,29 +27,58 @@ enum APIRouter {
     
     // Part of Auth (first part is authorization though Safari (ASWebAuthentication), because it's OAuth)
     
-    case token(code: String?, grandType: String, refreshToken: String?)
+    case token(code: String?, grantType: String, refreshToken: String?)
     
     // important things
     
+    var URLQueris: [URLQueryItem]? {
+        switch self {
+        case .topics(let page, let limit, let forum, let linked_id, let linked_type, let type):
+            var query: [URLQueryItem] = []
+            if let page = page {
+                query.append(URLQueryItem(name: "page", value: String(page)))
+            }
+            if let limit = limit {
+                query.append(URLQueryItem(name: "limit", value: String(limit)))
+            }
+            if let forum = forum {
+                query.append(URLQueryItem(name: "forum", value: String(forum)))
+            }
+            if let linked_id = linked_id {
+                query.append(URLQueryItem(name: "linked_id", value: String(linked_id)))
+            }
+            if let linked_type = linked_type {
+                query.append(URLQueryItem(name: "linked_type", value: String(linked_type)))
+            }
+            if let type = type {
+                query.append(URLQueryItem(name: "type", value: String(type)))
+            }
+            
+            return query
+        default:
+            return []
+        }
+    }
+    
     var parameters: FormData? {
         switch self {
-        case .token(let code, let grandType, let refreshToken):
+        case .token(let code, let grantType, let refreshToken):
             var form = FormData()
             form.addField(name: "client_id", value: CLIENT_ID)
             form.addField(name: "client_secret", value: CLIENT_SECRET)
-            form.addField(name: "grant_type", value: grandType)
+            form.addField(name: "grant_type", value: grantType)
             
-            
-            if code != nil {
+            if grantType == "authorization_code" {
                 form.addField(name: "code", value: code!)
                 form.addField(name: "redirect_uri", value: REDIRECT_URI)
             }
             else if refreshToken != nil {
                 form.addField(name: "refresh_token", value: refreshToken!)
             }
+            
             form.complete()
             return form
-        case .getAnime, .getUser, .whoami:
+        case .getAnime, .getUser, .whoami, .topics:
             return nil
         case .topicsHot(let limit):
             var form = FormData()
@@ -55,29 +86,6 @@ enum APIRouter {
                 form.addField(name: "limit", value: String(limit!))
             }
             form.complete()
-            return form
-        case .topics(let page, let limit, let forum, let linked_id, let linked_type, let type):
-            var form = FormData()
-            if let page = page {
-                form.addField(name: "page", value: String(limit!))
-            }
-            if let limit = limit {
-                form.addField(name: "limit", value: String(limit))
-            }
-            if let forum = forum {
-                form.addField(name: "forum", value: forum)
-            }
-            if let linked_id = linked_id {
-                form.addField(name: "linked_id", value: String(linked_id))
-            }
-            if let linked_type = linked_type {
-                form.addField(name: "linked_type", value: linked_type)
-            }
-            if let type = type {
-                form.addField(name: "type", value: type)
-            }
-            form.complete()
-            
             return form
         }
     }
