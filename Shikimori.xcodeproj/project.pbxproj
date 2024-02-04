@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800A57912B6E683200FA8311 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57902B6E683200FA8311 /* Topic.swift */; };
+		800A57932B6E752B00FA8311 /* Forum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57922B6E752B00FA8311 /* Forum.swift */; };
+		800A57952B6E754B00FA8311 /* Linked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57942B6E754B00FA8311 /* Linked.swift */; };
+		800A57992B6F5BCE00FA8311 /* TopicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */; };
+		800A579B2B6F5C2D00FA8311 /* TopicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579A2B6F5C2D00FA8311 /* TopicClient.swift */; };
 		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
 		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
@@ -43,6 +48,11 @@
 
 /* Begin PBXFileReference section */
 		6BB3A6D3B24FDC3039D80D62 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.debug.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
+		800A57902B6E683200FA8311 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		800A57922B6E752B00FA8311 /* Forum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forum.swift; sourceTree = "<group>"; };
+		800A57942B6E754B00FA8311 /* Linked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linked.swift; sourceTree = "<group>"; };
+		800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicProtocol.swift; sourceTree = "<group>"; };
+		800A579A2B6F5C2D00FA8311 /* TopicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicClient.swift; sourceTree = "<group>"; };
 		8013EAE92B2449D900FD9A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		801A3F372B30488800E63BC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		801A3F382B3048E800E63BC6 /* ghlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghlogo.png; sourceTree = "<group>"; };
@@ -102,10 +112,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		800A57962B6F5B7800FA8311 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				800A57942B6E754B00FA8311 /* Linked.swift */,
+				800A57922B6E752B00FA8311 /* Forum.swift */,
+				800A57902B6E683200FA8311 /* Topic.swift */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		800A57972B6F5B8E00FA8311 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				805BBC312B1E3BD70072944D /* Stats.swift */,
+				803DAE1A2B1B32C100D3A42B /* UserImage.swift */,
+				805BBC352B1E3BD70072944D /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		803AD7942B2B419600356E1F /* Client */ = {
 			isa = PBXGroup;
 			children = (
 				803AD7952B2B41A700356E1F /* AuthClient.swift */,
+				800A579A2B6F5C2D00FA8311 /* TopicClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -115,6 +146,7 @@
 			children = (
 				803DAE162B1B310900D3A42B /* UsersProtocol.swift */,
 				807EAF972B22F34400C79358 /* AuthProtocol.swift */,
+				800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -211,14 +243,13 @@
 		80F900F42B18FDA9001F937F /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				800A57972B6F5B8E00FA8311 /* User */,
+				800A57962B6F5B7800FA8311 /* Topic */,
 				805BBC2E2B1E3BD70072944D /* Status.swift */,
 				805BBC342B1E3BD70072944D /* FullStatuses.swift */,
 				805BBC332B1E3BD70072944D /* Ratings.swift */,
-				805BBC312B1E3BD70072944D /* Stats.swift */,
 				805BBC2F2B1E3BD70072944D /* TypeEnum.swift */,
-				805BBC352B1E3BD70072944D /* User.swift */,
 				80E16F0A2B19098100A27323 /* Error.swift */,
-				803DAE1A2B1B32C100D3A42B /* UserImage.swift */,
 				80EC72DB2B22569200277419 /* NameValue.swift */,
 				807EAF992B22F5D600C79358 /* Token.swift */,
 			);
@@ -332,9 +363,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */,
+				800A57912B6E683200FA8311 /* Topic.swift in Sources */,
 				805BBC392B1E3BD70072944D /* Stats.swift in Sources */,
 				805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */,
 				804A127F2B62ACD2005479B6 /* NewsModel.swift in Sources */,
+				800A57932B6E752B00FA8311 /* Forum.swift in Sources */,
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				8056B9202B614C9C00E19465 /* Config.swift in Sources */,
@@ -357,8 +390,11 @@
 				805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */,
 				80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */,
 				807EAF982B22F34400C79358 /* AuthProtocol.swift in Sources */,
+				800A579B2B6F5C2D00FA8311 /* TopicClient.swift in Sources */,
 				805BBC3B2B1E3BD70072944D /* Ratings.swift in Sources */,
+				800A57992B6F5BCE00FA8311 /* TopicProtocol.swift in Sources */,
 				8078F1842B2327A300A2A74D /* LoginView.swift in Sources */,
+				800A57952B6E754B00FA8311 /* Linked.swift in Sources */,
 				805B22FD2B1A4FD500BF9A1F /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

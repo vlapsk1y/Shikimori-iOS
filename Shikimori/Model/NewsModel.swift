@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class NewsModel: ObservableObject {
+    @Published var hasError: Bool = false
+    var message: String = String()
+    
+    func getNews() {
+        
+    }
+}

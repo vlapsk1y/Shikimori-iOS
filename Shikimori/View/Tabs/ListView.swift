@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        VStack {
-            Text("ListView")
+        NavigationView {
+            List {
+                
+            }
+            .navigationTitle("Список")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

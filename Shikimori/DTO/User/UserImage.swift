@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserImage {
+struct UserImage: Decodable {
     var x160: String
     var x148: String
     var x80: String
@@ -19,9 +19,6 @@ struct UserImage {
     enum CodingKeys: String, CodingKey {
         case x160, x148, x80, x64, x48, x32, x16
     }
-}
-
-extension UserImage: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         x160 = try values.decode(String.self, forKey: .x160)

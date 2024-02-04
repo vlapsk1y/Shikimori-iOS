@@ -9,8 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        VStack {
-            Text("SettingsView")
+        NavigationView {
+            List {
+                
+            }
+            .navigationTitle("Настройки")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
