@@ -28,7 +28,6 @@ struct NewsView: View {
             }
         }.onAppear {
             model.getNews()
-            print("access_token: \(AuthManager.shared.access_token)")
         }
     }
 }

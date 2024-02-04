@@ -21,7 +21,6 @@ class NewsModel: ObservableObject {
                     switch result {
                     case .success(let x):
                         self.topics = x
-                        print("Count of topics: \(x.count)")
                         self.isLoading.toggle()
                     case .failure(let x):
                         self.message = x.localizedDescription
