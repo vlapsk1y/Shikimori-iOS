@@ -65,7 +65,6 @@ class AuthManager {
     
     func deauth() -> Void {
         defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
-        defaults.removeObject(forKey: DEFAULTS_REFRESH_TOKEN)
         defaults.removeObject(forKey: DEFAULTS_TIMESTAMP)
         defaults.set(false, forKey: DEFAULTS_ISLOGGED)
     }
