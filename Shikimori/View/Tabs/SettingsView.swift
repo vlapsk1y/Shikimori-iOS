@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Binding var isLogged: Bool
+    
     var body: some View {
         NavigationView {
             List {
@@ -20,5 +22,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(isLogged: .constant(true))
 }

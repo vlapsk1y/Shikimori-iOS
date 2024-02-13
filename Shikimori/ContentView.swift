@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var isLogged: Bool
+    
     var body: some View {
         TabView {
-            NewsView()
+            NewsView(isLogged: $isLogged)
                 .tabItem {
                     Label("Новости", systemImage: "newspaper")
                 }
-            ListView()
+            ListView(isLogged: $isLogged)
                 .tabItem {
                     Label("Списки", systemImage: "list.bullet.rectangle.portrait")
                 }
-            SettingsView()
+            SettingsView(isLogged: $isLogged)
                 .tabItem {
                     Label("Настройки", systemImage: "gear")
                 }
@@ -27,5 +29,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(isLogged: .constant(true))
 }

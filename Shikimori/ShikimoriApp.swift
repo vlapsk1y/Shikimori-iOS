@@ -14,7 +14,7 @@ struct ShikimoriApp: App {
     var body: some Scene {
         WindowGroup {
             if islogged {
-                ContentView()
+                ContentView(isLogged: $islogged)
                     .transition(.slide)
             } else {
                 LoginView(isLogged: $islogged)

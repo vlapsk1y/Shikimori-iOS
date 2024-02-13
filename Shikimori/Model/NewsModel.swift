@@ -12,6 +12,7 @@ class NewsModel: ObservableObject {
     var message: String = String()
     @Published var isLoading: Bool = true
     var topics: [Topic] = []
+    @Published var isLogged: Bool = true
     
     func getNews() {
         Task {
@@ -23,6 +24,9 @@ class NewsModel: ObservableObject {
                         self.topics = x
                         self.isLoading.toggle()
                     case .failure(let x):
+                        if x == APIRequestError.deauth {
+                            self.isLogged = false
+                        }
                         self.message = x.localizedDescription
                         self.hasError.toggle()
                     }

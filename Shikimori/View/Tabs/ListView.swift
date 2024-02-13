@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ListView: View {
+    @Binding var isLogged: Bool
+    
     var body: some View {
         NavigationView {
             List {
@@ -20,5 +22,5 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView()
+    ListView(isLogged: .constant(true))
 }

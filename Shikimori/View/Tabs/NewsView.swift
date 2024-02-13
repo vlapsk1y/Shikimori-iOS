@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct NewsView: View {
-    @ObservedObject private var model = NewsModel()
+    @StateObject private var model = NewsModel()
+    @Binding var isLogged: Bool
     
     var body: some View {
         NavigationView {
@@ -27,11 +28,14 @@ struct NewsView: View {
                 .navigationBarTitleDisplayMode(.large)
             }
         }.onAppear {
-            model.getNews()
+            if model.topics.isEmpty {
+                model.getNews()
+            }
+            isLogged = model.isLogged
         }
     }
 }
 
 #Preview {
-    NewsView()
+    NewsView(isLogged: .constant(true))
 }

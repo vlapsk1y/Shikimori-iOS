@@ -34,8 +34,12 @@ class APIRequestDispatcher {
             }
             
             if let httpResponse = response as? HTTPURLResponse {
-                if httpResponse.statusCode == 401 {
-                    if Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 && UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) == 0 {
+                if apiRouter.path == "/oauth/token" && httpResponse.statusCode == 401 {
+                    AuthManager.shared.deauth()
+                    completion(.failure(.deauth))
+                }
+                if httpResponse.statusCode == 401 && apiRouter.path != "/oauth/token" {
+                    if Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
                         AuthManager.shared.updateToken()
                     }
                 }
