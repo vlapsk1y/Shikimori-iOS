@@ -19,7 +19,7 @@ class APIRequestDispatcher {
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = apiRouter.method
         urlRequest.addValue(USER_AGENT, forHTTPHeaderField: "User-Agent")
-        if AuthManager.shared.isLogged {
+        if AuthManager.shared.isLogged && apiRouter.path != "/oauth/token" {
             urlRequest.addValue("Bearer \(AuthManager.shared.access_token)", forHTTPHeaderField: "Authorization")
         }
         if apiRouter.method != "GET" {
