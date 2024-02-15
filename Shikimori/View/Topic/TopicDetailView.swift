@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TopicDetailView: View {
+    let topic: Topic
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Text(topic.body)
+        }.navigationTitle(topic.topicTitle)
     }
-}
-
-#Preview {
-    TopicDetailView()
 }

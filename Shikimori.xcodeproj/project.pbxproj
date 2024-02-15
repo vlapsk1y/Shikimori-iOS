@@ -31,6 +31,8 @@
 		805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC342B1E3BD70072944D /* FullStatuses.swift */; };
 		805BBC3D2B1E3BD70072944D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805BBC352B1E3BD70072944D /* User.swift */; };
 		80606E092B2E5847009A7B2D /* FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80606E082B2E5847009A7B2D /* FormData.swift */; };
+		8064639D2B7BE9DA003B1018 /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064639C2B7BE9DA003B1018 /* TopicDetailView.swift */; };
+		806E1FEA2B7E2008004A389C /* UI Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806E1FE92B7E2008004A389C /* UI Utils.swift */; };
 		806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806EB8372B5EF049008360B9 /* AuthManager.swift */; };
 		8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1812B23275200A2A74D /* AuthorizationModel.swift */; };
 		8078F1842B2327A300A2A74D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078F1832B2327A300A2A74D /* LoginView.swift */; };
@@ -76,6 +78,8 @@
 		805BBC342B1E3BD70072944D /* FullStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStatuses.swift; sourceTree = "<group>"; };
 		805BBC352B1E3BD70072944D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80606E082B2E5847009A7B2D /* FormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormData.swift; sourceTree = "<group>"; };
+		8064639C2B7BE9DA003B1018 /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
+		806E1FE92B7E2008004A389C /* UI Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Utils.swift"; sourceTree = "<group>"; };
 		806EB8372B5EF049008360B9 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8078F1812B23275200A2A74D /* AuthorizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModel.swift; sourceTree = "<group>"; };
 		8078F1832B2327A300A2A74D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -171,6 +175,14 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
+		8064639B2B7BE9C2003B1018 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				8064639C2B7BE9DA003B1018 /* TopicDetailView.swift */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
 		80869ADD2B18EA8E00E8730E = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 				805B22FC2B1A4FD500BF9A1F /* Const.swift */,
 				806EB8372B5EF049008360B9 /* AuthManager.swift */,
 				8056B91F2B614C9C00E19465 /* Config.swift */,
+				806E1FE92B7E2008004A389C /* UI Utils.swift */,
 			);
 			path = Shikimori;
 			sourceTree = "<group>";
@@ -232,6 +245,7 @@
 		80F900F12B18F207001F937F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8064639B2B7BE9C2003B1018 /* Topic */,
 				804A12792B62A857005479B6 /* Tabs */,
 				8078F1832B2327A300A2A74D /* LoginView.swift */,
 			);
@@ -375,6 +389,7 @@
 			files = (
 				803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */,
 				800A57912B6E683200FA8311 /* Topic.swift in Sources */,
+				806E1FEA2B7E2008004A389C /* UI Utils.swift in Sources */,
 				805BBC392B1E3BD70072944D /* Stats.swift in Sources */,
 				805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */,
 				804A127F2B62ACD2005479B6 /* NewsModel.swift in Sources */,
@@ -382,6 +397,7 @@
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				8056B9202B614C9C00E19465 /* Config.swift in Sources */,
+				8064639D2B7BE9DA003B1018 /* TopicDetailView.swift in Sources */,
 				803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */,
 				805BBC3D2B1E3BD70072944D /* User.swift in Sources */,
 				803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */,

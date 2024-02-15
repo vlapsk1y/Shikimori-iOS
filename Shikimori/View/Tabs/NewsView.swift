@@ -10,6 +10,7 @@ import SwiftUI
 struct NewsView: View {
     @StateObject private var model = NewsModel()
     @Binding var isLogged: Bool
+    @State private var isPresenting = false
     
     var body: some View {
         NavigationView {
@@ -18,12 +19,17 @@ struct NewsView: View {
                     .navigationTitle("Новости")
                     .navigationBarTitleDisplayMode(.large)
             } else {
-                List {
-                    ForEach(model.topics) { topic in
-                        TopicRow(topic: topic)
+                ScrollView {
+                    VStack {
+                        ForEach(model.topics) { topic in
+                            TopicRow(topic: topic)
+                                .padding()
+                                .shadow(radius: 15)
+                        }
                     }
+                    .padding(.bottom)
                 }
-                .listStyle(.grouped)
+                .background(Color.primary.opacity(0.06).ignoresSafeArea())
                 .navigationTitle("Новости")
                 .navigationBarTitleDisplayMode(.large)
             }
