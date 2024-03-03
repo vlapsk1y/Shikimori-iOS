@@ -10,4 +10,5 @@ import Foundation
 protocol UsersProtocol {
     func getUser(id: Int) async throws -> User
     func whoami() async throws -> User
+    func getAnimeRates() async throws -> UsersRate
 }

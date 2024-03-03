@@ -16,9 +16,11 @@ enum APIRouter {
     
     // User methods
     
-    // doc: https://shikimori.one/api/doc/1.0/users/show
+    // doc: https://shikimori.one/api/doc/1.0/users
     case getUser(id: Int)
     case whoami
+    case animeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?)
+    case mangaRates(idUser: Int, page: Int?, limit: Int?, censored: Bool?)
     
     // Animes methods
     
@@ -55,6 +57,35 @@ enum APIRouter {
             }
             
             return query
+        case .animeRates(_, let page, let limit, let status, let censored):
+            var query: [URLQueryItem] = []
+            if let page = page {
+                query.append(URLQueryItem(name: "page", value: String(page)))
+            }
+            if let limit = limit {
+                query.append(URLQueryItem(name: "limit", value: String(limit)))
+            }
+            if let status = status {
+                query.append(URLQueryItem(name: "status", value: String(status)))
+            }
+            if let censored = censored {
+                query.append(URLQueryItem(name: "censored", value: String(censored)))
+            }
+            
+            return query
+        case .mangaRates(_, let page, let limit, let censored):
+            var query: [URLQueryItem] = []
+            if let page = page {
+                query.append(URLQueryItem(name: "page", value: String(page)))
+            }
+            if let limit = limit {
+                query.append(URLQueryItem(name: "limit", value: String(limit)))
+            }
+            if let censored = censored {
+                query.append(URLQueryItem(name: "censored", value: String(censored)))
+            }
+            
+            return query
         default:
             return []
         }
@@ -78,7 +109,7 @@ enum APIRouter {
             
             form.complete()
             return form
-        case .getAnime, .getUser, .whoami, .topics:
+        case .getAnime, .getUser, .whoami, .topics, .animeRates, .mangaRates:
             return nil
         case .topicsHot(let limit):
             var form = FormData()
@@ -96,6 +127,10 @@ enum APIRouter {
             return "/api/users/\(id)"
         case .whoami:
             return "/api/users/whoami"
+        case .animeRates(let idUser, _, _, _, _):
+            return "/api/users/\(idUser)/anime_rates"
+        case .mangaRates(let idUser, _, _, _):
+            return "/api/users/\(idUser)/manga_rates"
         case .getAnime(let id):
             return "/api/animes/\(id)"
         case .token:
@@ -109,7 +144,7 @@ enum APIRouter {
     
     var method: String {
         switch self {
-        case .getAnime, .getUser, .whoami, .topicsHot, .topics:
+        case .getAnime, .getUser, .whoami, .topicsHot, .topics, .animeRates, .mangaRates:
             return "GET"
         case .token:
             return "POST"

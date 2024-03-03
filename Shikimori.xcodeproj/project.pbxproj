@@ -14,7 +14,7 @@
 		800A579B2B6F5C2D00FA8311 /* TopicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579A2B6F5C2D00FA8311 /* TopicClient.swift */; };
 		800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579D2B6FD01400FA8311 /* TopicRow.swift */; };
 		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
-		803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UsersProtocol.swift */; };
+		803DAE172B1B310900D3A42B /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UserProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
 		804A127B2B62AC26005479B6 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A127A2B62AC26005479B6 /* NewsView.swift */; };
 		804A127D2B62AC98005479B6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A127C2B62AC98005479B6 /* ListView.swift */; };
@@ -42,6 +42,11 @@
 		80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AEB2B18EA8E00E8730E /* ContentView.swift */; };
 		80869AEE2B18EA9000E8730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AED2B18EA9000E8730E /* Assets.xcassets */; };
 		80869AF12B18EA9000E8730E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AF02B18EA9000E8730E /* Preview Assets.xcassets */; };
+		80AEEEF42B943C3B0057588D /* StatusAnimeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF32B943C3A0057588D /* StatusAnimeList.swift */; };
+		80AEEEF62B944E7C0057588D /* UsersRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF52B944E7C0057588D /* UsersRate.swift */; };
+		80AEEEF82B9481370057588D /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF72B9481370057588D /* Anime.swift */; };
+		80AEEEFA2B9481EB0057588D /* Manga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF92B9481EB0057588D /* Manga.swift */; };
+		80AEEEFC2B9482800057588D /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEFB2B9482800057588D /* UserClient.swift */; };
 		80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */; };
 		80E16F092B1905C200A27323 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E16F082B1905C200A27323 /* APIRouter.swift */; };
 		80E16F0B2B19098100A27323 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E16F0A2B19098100A27323 /* Error.swift */; };
@@ -61,7 +66,7 @@
 		801A3F372B30488800E63BC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		801A3F382B3048E800E63BC6 /* ghlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghlogo.png; sourceTree = "<group>"; };
 		803AD7952B2B41A700356E1F /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
-		803DAE162B1B310900D3A42B /* UsersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersProtocol.swift; sourceTree = "<group>"; };
+		803DAE162B1B310900D3A42B /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		803DAE1A2B1B32C100D3A42B /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
 		804A127A2B62AC26005479B6 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		804A127C2B62AC98005479B6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -90,6 +95,11 @@
 		80869AEB2B18EA8E00E8730E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80869AED2B18EA9000E8730E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80869AF02B18EA9000E8730E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80AEEEF32B943C3A0057588D /* StatusAnimeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAnimeList.swift; sourceTree = "<group>"; };
+		80AEEEF52B944E7C0057588D /* UsersRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRate.swift; sourceTree = "<group>"; };
+		80AEEEF72B9481370057588D /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		80AEEEF92B9481EB0057588D /* Manga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manga.swift; sourceTree = "<group>"; };
+		80AEEEFB2B9482800057588D /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
 		80C6BF292B1A05B40073DAC6 /* APIRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestDispatcher.swift; sourceTree = "<group>"; };
 		80E16F082B1905C200A27323 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		80E16F0A2B19098100A27323 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -134,6 +144,7 @@
 				805BBC312B1E3BD70072944D /* Stats.swift */,
 				803DAE1A2B1B32C100D3A42B /* UserImage.swift */,
 				805BBC352B1E3BD70072944D /* User.swift */,
+				80AEEEF52B944E7C0057588D /* UsersRate.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			children = (
 				803AD7952B2B41A700356E1F /* AuthClient.swift */,
 				800A579A2B6F5C2D00FA8311 /* TopicClient.swift */,
+				80AEEEFB2B9482800057588D /* UserClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -158,7 +170,7 @@
 		803DAE152B1B30F500D3A42B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				803DAE162B1B310900D3A42B /* UsersProtocol.swift */,
+				803DAE162B1B310900D3A42B /* UserProtocol.swift */,
 				807EAF972B22F34400C79358 /* AuthProtocol.swift */,
 				800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */,
 			);
@@ -277,6 +289,9 @@
 				80E16F0A2B19098100A27323 /* Error.swift */,
 				80EC72DB2B22569200277419 /* NameValue.swift */,
 				807EAF992B22F5D600C79358 /* Token.swift */,
+				80AEEEF32B943C3A0057588D /* StatusAnimeList.swift */,
+				80AEEEF72B9481370057588D /* Anime.swift */,
+				80AEEEF92B9481EB0057588D /* Manga.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -393,14 +408,17 @@
 				805BBC392B1E3BD70072944D /* Stats.swift in Sources */,
 				805BBC372B1E3BD70072944D /* TypeEnum.swift in Sources */,
 				804A127F2B62ACD2005479B6 /* NewsModel.swift in Sources */,
+				80AEEEF42B943C3B0057588D /* StatusAnimeList.swift in Sources */,
 				800A57932B6E752B00FA8311 /* Forum.swift in Sources */,
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				8056B9202B614C9C00E19465 /* Config.swift in Sources */,
 				8064639D2B7BE9DA003B1018 /* TopicDetailView.swift in Sources */,
-				803DAE172B1B310900D3A42B /* UsersProtocol.swift in Sources */,
+				803DAE172B1B310900D3A42B /* UserProtocol.swift in Sources */,
 				805BBC3D2B1E3BD70072944D /* User.swift in Sources */,
+				80AEEEF62B944E7C0057588D /* UsersRate.swift in Sources */,
 				803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */,
+				80AEEEF82B9481370057588D /* Anime.swift in Sources */,
 				80E16F092B1905C200A27323 /* APIRouter.swift in Sources */,
 				804A12812B62ACDB005479B6 /* ListModel.swift in Sources */,
 				8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */,
@@ -409,12 +427,14 @@
 				804A127B2B62AC26005479B6 /* NewsView.swift in Sources */,
 				804A127D2B62AC98005479B6 /* ListView.swift in Sources */,
 				805B22FF2B1A5BEA00BF9A1F /* APIRequestError.swift in Sources */,
+				80AEEEFC2B9482800057588D /* UserClient.swift in Sources */,
 				804A12832B62AE20005479B6 /* SettingsView.swift in Sources */,
 				806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
 				800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
 				80606E092B2E5847009A7B2D /* FormData.swift in Sources */,
+				80AEEEFA2B9481EB0057588D /* Manga.swift in Sources */,
 				805BBC3C2B1E3BD70072944D /* FullStatuses.swift in Sources */,
 				80869AEA2B18EA8E00E8730E /* ShikimoriApp.swift in Sources */,
 				807EAF982B22F34400C79358 /* AuthProtocol.swift in Sources */,
@@ -562,7 +582,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shikimori/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Шикимори";
+				INFOPLIST_KEY_CFBundleDisplayName = Shikimori;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -599,7 +619,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Shikimori/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Шикимори";
+				INFOPLIST_KEY_CFBundleDisplayName = Shikimori;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
