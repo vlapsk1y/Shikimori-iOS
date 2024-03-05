@@ -8,17 +8,39 @@
 import Foundation
 
 class UserClient: UsersProtocol {
-    func getUser(id: Int) async throws -> User {
-        <#code#>
+    func getAnimeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?, completion: @escaping (Result<UsersRate, APIRequestError>) -> Void) async throws {
+        try await APIRequestDispatcher.request(apiRouter: .animeRates(idUser: idUser, page: page, limit: limit, status: status, censored: censored)) {
+            (result: Result<UsersRate, APIRequestError>) in
+            switch result {
+            case .success(let x):
+                completion(.success(x))
+            case .failure(let x):
+                completion(.failure(x))
+            }
+        }
     }
     
-    func whoami() async throws -> User {
-        <#code#>
+    func getUser(id: Int, completion: @escaping (Result<User, APIRequestError>) -> Void) async throws {
+            try await APIRequestDispatcher.request(apiRouter: .getUser(id: id)) {
+                (result: Result<User, APIRequestError>) in
+                switch result {
+                case .success(let x):
+                    completion(.success(x))
+                case .failure(let x):
+                    completion(.failure(x))
+                }
+            }
     }
     
-    func getAnimeRates() async throws -> UsersRate {
-        <#code#>
+    func whoami(completion: @escaping (Result<User, APIRequestError>) -> Void) async throws {
+        try await APIRequestDispatcher.request(apiRouter: .whoami) {
+            (result: Result<User, APIRequestError>) in
+            switch result {
+            case .success(let x):
+                completion(.success(x))
+            case .failure(let x):
+                completion(.failure(x))
+            }
+        }
     }
-    
-    
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UsersProtocol {
-    func getUser(id: Int) async throws -> User
-    func whoami() async throws -> User
-    func getAnimeRates() async throws -> UsersRate
+    func getUser(id: Int, completion: @escaping (Result<User, APIRequestError>) -> Void) async throws -> Void
+    func whoami(completion: @escaping (Result<User, APIRequestError>) -> Void) async throws -> Void
+    func getAnimeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?, completion: @escaping (Result<UsersRate, APIRequestError>) -> Void) async throws -> Void
 }
