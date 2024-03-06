@@ -17,7 +17,6 @@ struct ShikimoriApp: App {
                 ContentView(isLogged: $islogged)
                     .transition(.slide)
                     .onAppear {
-                        print("When token was get: \(NSDate(timeIntervalSince1970: TimeInterval(UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP))))")
                         if Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
                             AuthManager.shared.updateToken()
                         }
