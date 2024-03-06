@@ -36,6 +36,11 @@ class AuthManager {
             defaults.set(newValue, forKey: DEFAULTS_REFRESH_TOKEN)
         }
     }
+    var ownId: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "id")
+        }
+    }
     
     func updateToken() -> Void {
         if !isLogged { return }

@@ -8,9 +8,9 @@
 import Foundation
 
 class UserClient: UsersProtocol {
-    func getAnimeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?, completion: @escaping (Result<UsersRate, APIRequestError>) -> Void) async throws {
+    func getAnimeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?, completion: @escaping (Result<[UsersRate], APIRequestError>) -> Void) async throws {
         try await APIRequestDispatcher.request(apiRouter: .animeRates(idUser: idUser, page: page, limit: limit, status: status, censored: censored)) {
-            (result: Result<UsersRate, APIRequestError>) in
+            (result: Result<[UsersRate], APIRequestError>) in
             switch result {
             case .success(let x):
                 completion(.success(x))

@@ -18,6 +18,6 @@ struct Anime: Codable {
     let status: String
     let episodes: Int
     let episodes_aired: Int
-    let aired_on: String
-    let released_on: String
+    let aired_on: String?
+    let released_on: String?
 }
