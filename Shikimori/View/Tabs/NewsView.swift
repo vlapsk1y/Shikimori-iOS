@@ -24,7 +24,7 @@ struct NewsView: View {
                         ForEach(model.topics) { topic in
                             TopicRow(topic: topic)
                                 .padding()
-                                .shadow(radius: 15)
+                                .shadow(radius: 10)
                         }
                     }
                     .padding(.bottom)
