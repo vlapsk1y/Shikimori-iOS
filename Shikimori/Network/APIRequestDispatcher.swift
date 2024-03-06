@@ -40,11 +40,6 @@ class APIRequestDispatcher {
                     AuthManager.shared.deauth()
                     completion(.failure(.deauth))
                 }
-                if httpResponse.statusCode == 401 && apiRouter.path != "/oauth/token" {
-                    if Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
-                        AuthManager.shared.updateToken()
-                    }
-                }
             }
             
             do {
