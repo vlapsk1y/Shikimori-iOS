@@ -13,14 +13,16 @@ class APIRequestDispatcher {
         components.host = DOMAIN_API
         components.scheme = "https"
         components.path = apiRouter.path
-        components.queryItems = apiRouter.URLQueris
+        if apiRouter.URLQueris!.count > 0 {
+            components.queryItems = apiRouter.URLQueris
+        }
         
         let url = components.url
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = apiRouter.method
         urlRequest.addValue(USER_AGENT, forHTTPHeaderField: "User-Agent")
         if AuthManager.shared.isLogged && apiRouter.path != "/oauth/token" {
-            urlRequest.addValue("Bearer \(AuthManager.shared.access_token)", forHTTPHeaderField: "Authorization")
+            urlRequest.addValue("Bearer \(AuthManager.shared.access_token!)", forHTTPHeaderField: "Authorization")
         }
         if apiRouter.method != "GET" {
             urlRequest.addValue(apiRouter.parameters!.contentType, forHTTPHeaderField: "Content-Type")

@@ -20,9 +20,9 @@ class AuthManager {
             return UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED)
         }
     }
-    var access_token: String {
+    var access_token: String? {
         get {
-            return UserDefaults.standard.string(forKey: DEAFULTS_ACCESS_TOKEN)!
+            return UserDefaults.standard.string(forKey: DEAFULTS_ACCESS_TOKEN)
         }
         set {
             defaults.set(newValue, forKey: DEAFULTS_ACCESS_TOKEN)
@@ -56,16 +56,24 @@ class AuthManager {
         }
     }
     
+    func setOwnId(id: Int) -> Void {
+        defaults.set(id, forKey: "id")
+    }
+    
+    func setLogged() -> Void {
+        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
+    }
+    
     func setToken(access: String, refresh: String) -> Void {
         access_token = access
         refresh_token = refresh
-        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
         defaults.set(Int(NSDate().timeIntervalSince1970), forKey: DEFAULTS_TIMESTAMP)
     }
     
     func deauth() -> Void {
         defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
         defaults.removeObject(forKey: DEFAULTS_TIMESTAMP)
+        defaults.removeObject(forKey: "id")
         defaults.set(false, forKey: DEFAULTS_ISLOGGED)
     }
 }

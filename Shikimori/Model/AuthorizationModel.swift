@@ -50,6 +50,23 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
     }
     
     private func getToken(token: Token) {
+        AuthManager.shared.setLogged()
+        if AuthManager.shared.access_token == nil {
+            Task {
+                do {
+                    try await UserClient().whoami() {
+                        (result: Result<User, APIRequestError>) in
+                        switch result {
+                        case .success(let x):
+                            AuthManager.shared.setOwnId(id: x.id)
+                            print(x.id)
+                        case .failure(_):
+                            break
+                        }
+                    }
+                }
+            }
+        }
         AuthManager.shared.setToken(access: token.accessToken!, refresh: token.refreshToken!)
     }
 }
