@@ -7,9 +7,9 @@
 
 import Foundation
 
+import Foundation
+
 class NewsModel: ObservableObject {
-    @Published var hasError: Bool = false
-    var message: String = String()
     @Published var isLoading: Bool = true
     var topics: [Topic] = []
     @Published var isLogged: Bool = true
@@ -21,19 +21,26 @@ class NewsModel: ObservableObject {
                     (result: Result<[Topic], APIRequestError>) in
                     switch result {
                     case .success(let x):
-                        self.topics = x
-                        self.isLoading.toggle()
+                        Task {
+                            do {
+                                await self.updateTopics(x)
+                            }
+                        }
                     case .failure(let x):
                         if x == APIRequestError.deauth {
                             self.isLogged = false
                         }
-                        self.message = x.localizedDescription
-                        self.hasError.toggle()
                     }
                 }
-            } catch(let error) {
+            } catch {
                 print(error)
             }
         }
+    }
+    
+    @MainActor
+    func updateTopics(_ newTopics: [Topic]) {
+        self.topics = newTopics
+        self.isLoading = false
     }
 }
