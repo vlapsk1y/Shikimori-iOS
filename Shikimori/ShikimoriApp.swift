@@ -12,7 +12,7 @@ struct ShikimoriApp: App {
     @State var islogged: Bool
     
     init() {
-        if UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED) && Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 20 {
+        if UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED) && Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
             AuthManager.shared.updateToken()
         }
         
