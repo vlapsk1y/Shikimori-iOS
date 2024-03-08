@@ -17,12 +17,15 @@ class AuthManager {
     
     var isLogged: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED)
+            return defaults.bool(forKey: DEFAULTS_ISLOGGED)
+        }
+        set {
+            defaults.setValue(newValue, forKey: DEFAULTS_ISLOGGED)
         }
     }
     var access_token: String? {
         get {
-            return UserDefaults.standard.string(forKey: DEAFULTS_ACCESS_TOKEN)
+            return defaults.string(forKey: DEAFULTS_ACCESS_TOKEN)
         }
         set {
             defaults.set(newValue, forKey: DEAFULTS_ACCESS_TOKEN)
@@ -30,7 +33,7 @@ class AuthManager {
     }
     var refresh_token: String {
         get {
-            return UserDefaults.standard.string(forKey: DEFAULTS_REFRESH_TOKEN)!
+            return defaults.string(forKey: DEFAULTS_REFRESH_TOKEN)!
         }
         set {
             defaults.set(newValue, forKey: DEFAULTS_REFRESH_TOKEN)
@@ -38,7 +41,7 @@ class AuthManager {
     }
     var ownId: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "id")
+            return defaults.integer(forKey: "id")
         }
     }
     
