@@ -9,18 +9,23 @@ import SwiftUI
 
 @main
 struct ShikimoriApp: App {
-    @State var islogged: Bool = AuthManager.shared.isLogged
+    @State var islogged: Bool
+    
+    init() {
+        if UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED) && Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 20 {
+            AuthManager.shared.updateToken()
+        }
+        
+        sleep(1)
+        
+        self.islogged = AuthManager.shared.isLogged
+    }
     
     var body: some Scene {
         WindowGroup {
             if islogged {
                 ContentView(isLogged: $islogged)
                     .transition(.slide)
-                    .onAppear {
-                        if Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
-                            AuthManager.shared.updateToken()
-                        }
-                    }
             } else {
                 LoginView(isLogged: $islogged)
                     .transition(.slide)
