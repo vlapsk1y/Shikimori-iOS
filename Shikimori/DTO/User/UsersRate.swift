@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UsersRate: Decodable {
+struct UsersRate: Decodable, Identifiable {
     let id: Int
     let score: Int
     let status: String

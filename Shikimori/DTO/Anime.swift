@@ -13,7 +13,7 @@ struct Anime: Codable {
     let russian: String?
     let image: UserImage?
     let url: String
-    let kind: String
+    let kind: String?
     let score: String
     let status: String
     let episodes: Int
