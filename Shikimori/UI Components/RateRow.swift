@@ -7,12 +7,18 @@
 
 import SwiftUI
 
-struct ListRow: View {
+struct RateRow: View {
     var item: UsersRate
     
     var body: some View {
-        HStack {
-            Text(item.anime?.name ?? "")
+        VStack(alignment: .leading) {
+            HStack {
+                Text(item.anime?.name ?? "")
+                    .lineLimit(1)
+            }
+            Text("\(StatusAnimeList(fromRawValue: item.status).readable) | \(item.episodes)/\(item.anime!.episodes)")
+                .foregroundStyle(.gray)
+                .font(.caption)
         }
     }
 }

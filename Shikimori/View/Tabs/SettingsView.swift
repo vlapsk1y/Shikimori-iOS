@@ -13,7 +13,13 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                
+                Button() {
+                    AuthManager().deauth()
+                    self.isLogged = false
+                } label: {
+                    Text("Выйти из аккаунта")
+                        .foregroundStyle(.red)
+                }
             }
             .navigationTitle("Настройки")
             .navigationBarTitleDisplayMode(.large)

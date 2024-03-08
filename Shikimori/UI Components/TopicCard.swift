@@ -6,9 +6,8 @@
 //
 
 import SwiftUI
-import SwiftSoup
 
-struct TopicRow: View {
+struct TopicCard: View {
     var topic: Topic
     
     @Environment(\.colorScheme) var color

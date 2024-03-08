@@ -9,14 +9,23 @@ import SwiftUI
 
 struct ListView: View {
     @Binding var isLogged: Bool
+    @StateObject private var model = ListModel()
     
     var body: some View {
         NavigationView {
-            List {
-                
+            if model.isLoading {
+                ProgressView()
+            } else {
+                List {
+                    ForEach(model.rates) { rate in
+                        RateRow(item: rate)
+                    }
+                }.navigationTitle("Список")
+                    .navigationBarTitleDisplayMode(.large)
             }
-            .navigationTitle("Список")
-            .navigationBarTitleDisplayMode(.large)
+        }
+        .onAppear {
+            model.getRates()
         }
     }
 }

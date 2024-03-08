@@ -18,7 +18,7 @@ struct ContentView: View {
                 }
             ListView(isLogged: $isLogged)
                 .tabItem {
-                    Label("Списки", systemImage: "list.bullet.rectangle.portrait")
+                    Label("Список", systemImage: "list.bullet.rectangle.portrait")
                 }
             SettingsView(isLogged: $isLogged)
                 .tabItem {
@@ -26,8 +26,4 @@ struct ContentView: View {
                 }
         }
     }
-}
-
-#Preview {
-    ContentView(isLogged: .constant(true))
 }

@@ -22,7 +22,7 @@ struct NewsView: View {
                 ScrollView {
                     VStack {
                         ForEach(model.topics) { topic in
-                            TopicRow(topic: topic)
+                            TopicCard(topic: topic)
                                 .padding()
                                 .shadow(radius: 10)
                         }

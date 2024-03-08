@@ -12,7 +12,7 @@
 		800A57952B6E754B00FA8311 /* Linked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57942B6E754B00FA8311 /* Linked.swift */; };
 		800A57992B6F5BCE00FA8311 /* TopicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */; };
 		800A579B2B6F5C2D00FA8311 /* TopicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579A2B6F5C2D00FA8311 /* TopicClient.swift */; };
-		800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579D2B6FD01400FA8311 /* TopicRow.swift */; };
+		800A579E2B6FD01400FA8311 /* TopicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A579D2B6FD01400FA8311 /* TopicCard.swift */; };
 		803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AD7952B2B41A700356E1F /* AuthClient.swift */; };
 		803DAE172B1B310900D3A42B /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE162B1B310900D3A42B /* UserProtocol.swift */; };
 		803DAE1B2B1B32C100D3A42B /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE1A2B1B32C100D3A42B /* UserImage.swift */; };
@@ -42,6 +42,8 @@
 		80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80869AEB2B18EA8E00E8730E /* ContentView.swift */; };
 		80869AEE2B18EA9000E8730E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AED2B18EA9000E8730E /* Assets.xcassets */; };
 		80869AF12B18EA9000E8730E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80869AF02B18EA9000E8730E /* Preview Assets.xcassets */; };
+		808C7A4C2B9B2212002B9242 /* RateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C7A4B2B9B2212002B9242 /* RateRow.swift */; };
+		808C7A4E2B9B7208002B9242 /* InitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C7A4D2B9B7208002B9242 /* InitModel.swift */; };
 		80AEEEF42B943C3B0057588D /* StatusAnimeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF32B943C3A0057588D /* StatusAnimeList.swift */; };
 		80AEEEF62B944E7C0057588D /* UsersRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF52B944E7C0057588D /* UsersRate.swift */; };
 		80AEEEF82B9481370057588D /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEEEF72B9481370057588D /* Anime.swift */; };
@@ -61,7 +63,7 @@
 		800A57942B6E754B00FA8311 /* Linked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linked.swift; sourceTree = "<group>"; };
 		800A57982B6F5BCE00FA8311 /* TopicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicProtocol.swift; sourceTree = "<group>"; };
 		800A579A2B6F5C2D00FA8311 /* TopicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicClient.swift; sourceTree = "<group>"; };
-		800A579D2B6FD01400FA8311 /* TopicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRow.swift; sourceTree = "<group>"; };
+		800A579D2B6FD01400FA8311 /* TopicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCard.swift; sourceTree = "<group>"; };
 		8013EAE92B2449D900FD9A13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		801A3F372B30488800E63BC6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		801A3F382B3048E800E63BC6 /* ghlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghlogo.png; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		80869AEB2B18EA8E00E8730E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80869AED2B18EA9000E8730E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80869AF02B18EA9000E8730E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		808C7A4B2B9B2212002B9242 /* RateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateRow.swift; sourceTree = "<group>"; };
+		808C7A4D2B9B7208002B9242 /* InitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitModel.swift; sourceTree = "<group>"; };
 		80AEEEF32B943C3A0057588D /* StatusAnimeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAnimeList.swift; sourceTree = "<group>"; };
 		80AEEEF52B944E7C0057588D /* UsersRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRate.swift; sourceTree = "<group>"; };
 		80AEEEF72B9481370057588D /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
@@ -152,7 +156,8 @@
 		800A579C2B6FCF3C00FA8311 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				800A579D2B6FD01400FA8311 /* TopicRow.swift */,
+				800A579D2B6FD01400FA8311 /* TopicCard.swift */,
+				808C7A4B2B9B2212002B9242 /* RateRow.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				8078F1812B23275200A2A74D /* AuthorizationModel.swift */,
 				804A127E2B62ACD2005479B6 /* NewsModel.swift */,
 				804A12802B62ACDB005479B6 /* ListModel.swift */,
+				808C7A4D2B9B7208002B9242 /* InitModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,7 +340,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					80869AE52B18EA8E00E8730E = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -411,6 +417,7 @@
 				80AEEEF42B943C3B0057588D /* StatusAnimeList.swift in Sources */,
 				800A57932B6E752B00FA8311 /* Forum.swift in Sources */,
 				80E16F0B2B19098100A27323 /* Error.swift in Sources */,
+				808C7A4C2B9B2212002B9242 /* RateRow.swift in Sources */,
 				80869AEC2B18EA8E00E8730E /* ContentView.swift in Sources */,
 				8056B9202B614C9C00E19465 /* Config.swift in Sources */,
 				8064639D2B7BE9DA003B1018 /* TopicDetailView.swift in Sources */,
@@ -420,6 +427,7 @@
 				803AD7962B2B41A700356E1F /* AuthClient.swift in Sources */,
 				80AEEEF82B9481370057588D /* Anime.swift in Sources */,
 				80E16F092B1905C200A27323 /* APIRouter.swift in Sources */,
+				808C7A4E2B9B7208002B9242 /* InitModel.swift in Sources */,
 				804A12812B62ACDB005479B6 /* ListModel.swift in Sources */,
 				8078F1822B23275200A2A74D /* AuthorizationModel.swift in Sources */,
 				80EC72DC2B22569200277419 /* NameValue.swift in Sources */,
@@ -431,7 +439,7 @@
 				804A12832B62AE20005479B6 /* SettingsView.swift in Sources */,
 				806EB8382B5EF049008360B9 /* AuthManager.swift in Sources */,
 				805BBC362B1E3BD70072944D /* Status.swift in Sources */,
-				800A579E2B6FD01400FA8311 /* TopicRow.swift in Sources */,
+				800A579E2B6FD01400FA8311 /* TopicCard.swift in Sources */,
 				80C6BF2A2B1A05B40073DAC6 /* APIRequestDispatcher.swift in Sources */,
 				80606E092B2E5847009A7B2D /* FormData.swift in Sources */,
 				80AEEEFA2B9481EB0057588D /* Manga.swift in Sources */,
@@ -455,6 +463,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -518,6 +527,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

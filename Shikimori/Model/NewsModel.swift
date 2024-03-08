@@ -32,9 +32,8 @@ class NewsModel: ObservableObject {
                         }
                     }
                 }
-            } catch {
-                print(error)
-            }
+            } 
+            catch { print(error) }
         }
     }
     
