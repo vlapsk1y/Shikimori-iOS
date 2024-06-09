@@ -28,7 +28,7 @@ struct LoginView: View {
                 .font(.caption)
                 .foregroundStyle(.gray)
             Button(action: {
-                auth.authInShikimori() { x in
+                auth.authInShikimori { x in
                     isLogged = x
                 }
             }, label: {

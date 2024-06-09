@@ -18,7 +18,7 @@ struct Stats {
 extension Stats: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         statuses = try container.decode(FullStatuses.self, forKey: .statuses)
         fullStatuses = try container.decode(FullStatuses.self, forKey: .fullStatuses)
         scores = try container.decode(FullStatuses.self, forKey: .scores)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Binding var isLogged: Bool
-    
+
     var body: some View {
         TabView {
             NewsView(isLogged: $isLogged)

@@ -1,3 +1,4 @@
 target 'Shikimori' do
   pod 'SwiftSoup'
+  pod 'SwiftLint'
 end

@@ -8,31 +8,31 @@
 import Foundation
 
 enum APIRouter {
-    
+
     // Topic methods
     // doc: https://shikimori.one/api/doc/1.0/topics
     case topicsHot(limit: Int?)
     case topics(page: Int?, limit: Int?, forum: String?, linked_id: Int?, linked_type: String?, type: String?)
-    
+
     // User methods
-    
+
     // doc: https://shikimori.one/api/doc/1.0/users
     case getUser(id: Int)
     case whoami
     case animeRates(idUser: Int, page: Int?, limit: Int?, status: String?, censored: Bool?)
     case mangaRates(idUser: Int, page: Int?, limit: Int?, censored: Bool?)
-    
+
     // Animes methods
-    
+
     // doc: https://shikimori.one/api/doc/1.0/animes/show
     case getAnime(id: Int)
-    
+
     // Part of Auth (first part is authorization though Safari (ASWebAuthentication), because it's OAuth)
-    
+
     case token(code: String?, grantType: String, refreshToken: String?)
-    
+
     // important things
-    
+
     var URLQueris: [URLQueryItem]? {
         switch self {
         case .topics(let page, let limit, let forum, let linked_id, let linked_type, let type):
@@ -55,7 +55,7 @@ enum APIRouter {
             if let type = type {
                 query.append(URLQueryItem(name: "type", value: String(type)))
             }
-            
+
             return query
         case .animeRates(_, let page, let limit, let status, let censored):
             var query: [URLQueryItem] = []
@@ -71,7 +71,7 @@ enum APIRouter {
             if let censored = censored {
                 query.append(URLQueryItem(name: "censored", value: String(censored)))
             }
-            
+
             return query
         case .mangaRates(_, let page, let limit, let censored):
             var query: [URLQueryItem] = []
@@ -84,13 +84,13 @@ enum APIRouter {
             if let censored = censored {
                 query.append(URLQueryItem(name: "censored", value: String(censored)))
             }
-            
+
             return query
         default:
             return []
         }
     }
-    
+
     var parameters: FormData? {
         switch self {
         case .token(let code, let grantType, let refreshToken):
@@ -98,15 +98,14 @@ enum APIRouter {
             form.addField(name: "client_id", value: CLIENT_ID)
             form.addField(name: "client_secret", value: CLIENT_SECRET)
             form.addField(name: "grant_type", value: grantType)
-            
+
             if grantType == "authorization_code" {
                 form.addField(name: "code", value: code!)
                 form.addField(name: "redirect_uri", value: REDIRECT_URI)
-            }
-            else if refreshToken != nil {
+            } else if refreshToken != nil {
                 form.addField(name: "refresh_token", value: refreshToken!)
             }
-            
+
             form.complete()
             return form
         case .getAnime, .getUser, .whoami, .topics, .animeRates, .mangaRates:
@@ -120,7 +119,7 @@ enum APIRouter {
             return form
         }
     }
-    
+
     var path: String {
         switch self {
         case .getUser(let id):
@@ -141,7 +140,7 @@ enum APIRouter {
             return "/api/topics"
         }
     }
-    
+
     var method: String {
         switch self {
         case .getAnime, .getUser, .whoami, .topicsHot, .topics, .animeRates, .mangaRates:

@@ -10,17 +10,19 @@ import SwiftUI
 @main
 struct ShikimoriApp: App {
     @State var islogged: Bool
-    
+
     init() {
-        if UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED) && Int(NSDate().timeIntervalSince1970) - UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP) > 86400 {
+        let timestamp = UserDefaults.standard.integer(forKey: DEFAULTS_TIMESTAMP)
+        let now = Int(NSDate().timeIntervalSince1970)
+        if UserDefaults.standard.bool(forKey: DEFAULTS_ISLOGGED) && now - timestamp > 86400 {
             AuthManager.shared.updateToken()
         }
-        
+
         sleep(1)
-        
+
         self.islogged = AuthManager.shared.isLogged
     }
-    
+
     var body: some Scene {
         WindowGroup {
             if islogged {
@@ -32,6 +34,5 @@ struct ShikimoriApp: App {
             }
         }
     }
-    
-    
+
 }

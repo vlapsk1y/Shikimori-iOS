@@ -21,7 +21,7 @@ struct Linked: Decodable {
         case airedOn = "aired_on"
         case releasedOn = "released_on"
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)

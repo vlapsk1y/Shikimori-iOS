@@ -11,74 +11,53 @@ class AuthManager {
     private var defaults = UserDefaults.standard
     static let shared: AuthManager = {
         let instance = AuthManager()
-        
         return instance
     }()
-    
+
     var isLogged: Bool {
-        get {
-            return defaults.bool(forKey: DEFAULTS_ISLOGGED)
-        }
-        set {
-            defaults.setValue(newValue, forKey: DEFAULTS_ISLOGGED)
-        }
+        get { return defaults.bool(forKey: DEFAULTS_ISLOGGED) }
+        set { defaults.setValue(newValue, forKey: DEFAULTS_ISLOGGED) }
     }
-    var access_token: String? {
-        get {
-            return defaults.string(forKey: DEAFULTS_ACCESS_TOKEN)
-        }
-        set {
-            defaults.set(newValue, forKey: DEAFULTS_ACCESS_TOKEN)
-        }
+    var accessToken: String? {
+        get { return defaults.string(forKey: DEAFULTS_ACCESS_TOKEN) }
+        set { defaults.set(newValue, forKey: DEAFULTS_ACCESS_TOKEN) }
     }
-    var refresh_token: String {
-        get {
-            return defaults.string(forKey: DEFAULTS_REFRESH_TOKEN)!
-        }
-        set {
-            defaults.set(newValue, forKey: DEFAULTS_REFRESH_TOKEN)
-        }
+    var refreshToken: String {
+        get { return defaults.string(forKey: DEFAULTS_REFRESH_TOKEN)! }
+        set { defaults.set(newValue, forKey: DEFAULTS_REFRESH_TOKEN) }
     }
     var ownId: Int {
-        get {
-            return defaults.integer(forKey: "id")
-        }
+        get { return defaults.integer(forKey: "id") }
     }
-    
-    func updateToken() -> Void {
+
+    func updateToken() {
         if !isLogged { return }
-        
+
         Task {
             do {
-                try await AuthClient().refreshToken(refresh_token: refresh_token) {
-                    (result: Result<Token, APIRequestError>) in
+                try await AuthClient().refreshToken(token: refreshToken) { (result: Result<Token, APIRequestError>) in
                     switch result {
                     case .success(let x):
-                        print("New token! access_token: \(x.accessToken!), refresh_token: \(x.refreshToken!), timestamp: \(x.expiresIn!)")
                         self.setToken(access: x.accessToken!, refresh: x.refreshToken!)
-                    case .failure(_):
+                    case .failure:
                         break
                     }
                 }
             }
         }
     }
-    
-    func setOwnId(id: Int) -> Void {
-        defaults.set(id, forKey: "id")
-    }
-    
-    func setLogged() -> Void {
-        defaults.set(true, forKey: DEFAULTS_ISLOGGED)
-    }
-    
-    func setToken(access: String, refresh: String) -> Void {
-        access_token = access
-        refresh_token = refresh
+
+    func setOwnId(id: Int) { defaults.set(id, forKey: "id") }
+
+    func setLogged() { defaults.set(true, forKey: DEFAULTS_ISLOGGED) }
+
+    func setToken(access: String, refresh: String) {
+        accessToken = access
+        refreshToken = refresh
         defaults.set(Int(NSDate().timeIntervalSince1970), forKey: DEFAULTS_TIMESTAMP)
     }
-    
-    func deauth() -> Void {
+
+    func deauth() {
         defaults.removeObject(forKey: DEAFULTS_ACCESS_TOKEN)
         defaults.removeObject(forKey: DEFAULTS_TIMESTAMP)
         defaults.removeObject(forKey: "id")

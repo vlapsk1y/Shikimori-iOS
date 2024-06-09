@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopicDetailView: View {
     let topic: Topic
-    
+
     var body: some View {
         List {
             Text(topic.body)

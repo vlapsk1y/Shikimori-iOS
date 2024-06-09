@@ -9,13 +9,12 @@ import SwiftUI
 
 struct TopicCard: View {
     var topic: Topic
-    
+
     @Environment(\.colorScheme) var color
     var body: some View {
         if extractFromFooterHTML(doc: topic.htmlFooter) != nil {
             VStack {
-                AsyncImage(url: URL(string: extractFromFooterHTML(doc: topic.htmlFooter)!), content: {
-                    image in
+                AsyncImage(url: URL(string: extractFromFooterHTML(doc: topic.htmlFooter)!), content: {image in
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: UIScreen.main.bounds.width - 30, height: 250)

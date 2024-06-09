@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RateRow: View {
     var item: UsersRate
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {

@@ -14,7 +14,7 @@ struct Token {
     let refreshToken: String?
     let scope: String?
     let createdAt: Int?
-    
+
     enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
         case tokenType = "token_type"
@@ -23,21 +23,12 @@ struct Token {
         case scope
         case createdAt = "created_at"
     }
-    
-    init(accessToken: String?, tokenType: String?, expiresIn: Int?, refreshToken: String?, scope: String?, createdAt: Int?) {
-        self.accessToken = accessToken
-        self.tokenType = tokenType
-        self.expiresIn = expiresIn
-        self.refreshToken = refreshToken
-        self.scope = scope
-        self.createdAt = createdAt
-    }
 }
 
 extension Token: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         accessToken = try container.decode(String.self, forKey: .accessToken)
         tokenType = try container.decode(String.self, forKey: .tokenType)
         expiresIn = try container.decode(Int.self, forKey: .expiresIn)

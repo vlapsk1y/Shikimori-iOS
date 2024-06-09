@@ -10,7 +10,7 @@ import SwiftUI
 struct ListView: View {
     @Binding var isLogged: Bool
     @StateObject private var model = ListModel()
-    
+
     var body: some View {
         NavigationView {
             if model.isLoading {

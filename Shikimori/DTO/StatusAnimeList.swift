@@ -9,11 +9,11 @@ import Foundation
 
 enum StatusAnimeList: String {
     case planned, watching, rewatching, completed, on_hold, dropped, none
-    
+
     init(fromRawValue: String) {
         self = StatusAnimeList(rawValue: fromRawValue) ?? .none
     }
-    
+
     var readable: String {
         switch self {
         case .planned:

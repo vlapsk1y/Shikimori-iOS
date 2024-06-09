@@ -57,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048D05982C15CF97005035CF /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6BB3A6D3B24FDC3039D80D62 /* Pods-Shikimori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shikimori.debug.xcconfig"; path = "Target Support Files/Pods-Shikimori/Pods-Shikimori.debug.xcconfig"; sourceTree = "<group>"; };
 		800A57902B6E683200FA8311 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		800A57922B6E752B00FA8311 /* Forum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forum.swift; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		80869ADD2B18EA8E00E8730E = {
 			isa = PBXGroup;
 			children = (
+				048D05982C15CF97005035CF /* .swiftlint.yml */,
 				801A3F382B3048E800E63BC6 /* ghlogo.png */,
 				801A3F372B30488800E63BC6 /* README.md */,
 				80869AE82B18EA8E00E8730E /* Shikimori */,
@@ -322,6 +324,8 @@
 				80869AE22B18EA8E00E8730E /* Sources */,
 				80869AE32B18EA8E00E8730E /* Frameworks */,
 				80869AE42B18EA8E00E8730E /* Resources */,
+				04854E762C15C92400E55387 /* ShellScript */,
+				3B55414CBC5024E0F3E834A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,6 +383,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04854E762C15C92400E55387 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		3B55414CBC5024E0F3E834A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shikimori/Pods-Shikimori-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shikimori/Pods-Shikimori-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shikimori/Pods-Shikimori-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7C056EC6ECD73280AF1B00A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,7 +534,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -560,7 +598,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

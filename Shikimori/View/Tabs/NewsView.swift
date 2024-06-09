@@ -11,7 +11,7 @@ struct NewsView: View {
     @StateObject private var model = NewsModel()
     @Binding var isLogged: Bool
     @State private var isPresenting = false
-    
+
     var body: some View {
         NavigationView {
             if model.isLoading {

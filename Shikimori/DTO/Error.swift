@@ -10,7 +10,7 @@ import Foundation
 struct ErrorAPI {
     var error: String
     var description: String
-    
+
     enum CodingKeys: String, CodingKey {
         case error
         case description = "error_description"

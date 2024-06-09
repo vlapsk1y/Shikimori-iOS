@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SettingsView: View {
     @Binding var isLogged: Bool
-    
+
     var body: some View {
         NavigationView {
             List {
-                Button() {
+                Button {
                     AuthManager().deauth()
                     self.isLogged = false
                 } label: {

@@ -12,20 +12,21 @@ import SwiftUI
 
 class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresentationContextProviding {
     typealias ASPresentationAnchor = UIWindow
-    var session: ASWebAuthenticationSession? = nil
+    var session: ASWebAuthenticationSession?
     @Published var hasError: Bool = false
     var message: String = String()
 
-    
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         return ASPresentationAnchor()
     }
-    
+
     func authInShikimori(completion: @escaping (Bool) -> Void) {
-        session = ASWebAuthenticationSession(url: URL(string: AUTH_URL)!, callbackURLScheme: "shikimoriswift%3A%2Fauth", completionHandler: { callback, error in
+        session = ASWebAuthenticationSession(url: URL(string: AUTH_URL)!,
+                                             callbackURLScheme: "shikimoriswift%3A%2Fauth",
+                                             completionHandler: { callback, error in
             guard error == nil, let success = callback else { return }
             let code = NSURLComponents(string: (success.absoluteString))?.queryItems?.filter({ $0.name == "code" }).first
-            
+
             Task {
                 do {
                     try await AuthClient().token(code: code?.value) { (result: Result<Token, APIRequestError>) in
@@ -48,19 +49,18 @@ class AuthorizationModel: NSObject, ObservableObject, ASWebAuthenticationPresent
         session?.presentationContextProvider = self
         session?.start()
     }
-    
+
     private func getToken(token: Token) {
         AuthManager.shared.setLogged()
-        if AuthManager.shared.access_token == nil {
+        if AuthManager.shared.accessToken == nil {
             Task {
                 do {
-                    try await UserClient().whoami() {
-                        (result: Result<User, APIRequestError>) in
+                    try await UserClient().whoami { (result: Result<User, APIRequestError>) in
                         switch result {
                         case .success(let x):
                             AuthManager.shared.setOwnId(id: x.id)
                             print(x.id)
-                        case .failure(_):
+                        case .failure:
                             break
                         }
                     }
